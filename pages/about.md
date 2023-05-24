@@ -4,7 +4,7 @@ title: About
 permalink: /about
 ---
 
-# Life in Five Lands: A Multicultural Chronicle
+## Life in Five Lands: A Multicultural Chronicle
 
 Join me in my heartfelt exploration of life lived across five diverse countries over the past decade. Through captivating stories and musings, I'll share my experiences, from the joys of cultural immersion to the delightful quirks of everyday life.
 
