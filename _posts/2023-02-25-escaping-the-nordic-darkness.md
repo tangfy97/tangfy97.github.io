@@ -2,7 +2,7 @@
 layout: post
 title: "Escaping the Nordic Darkness"
 author: "Feiyang"
-categories: blog
+categories: travel
 tags: [travel,europe,spain,portugal]
 image: alicante.jpg
 ---
