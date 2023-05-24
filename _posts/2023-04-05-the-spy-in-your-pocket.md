@@ -4,7 +4,7 @@ title: "The Spy in Your Pocket: the Data Secrets of Mobile Apps."
 author: "Feiyang"
 categories: facts
 tags: [tech,privacy,cs,software]
-image: mobile.png
+image: mobile.jpg
 ---
 
 Imagine having a friend who keeps a diary of everything you do, right down to your tiny gestures and expressions. That's pretty much your smartphone, but guess what? Your phone isn't quite the friend you thought it was. It's been telling tales about you to your favorite apps all along!
