@@ -7,7 +7,6 @@ tags: [travel,europe,spain,portugal]
 image: alicante.jpg
 ---
 
-# Escaping the Nordic Darkness: 
 ## Sun-Soaked Delights in Alicante and Lisbon
 
 February 2023 marked an exhilarating chapter in my life as I ventured to the sun-soaked destinations of Alicante and Lisbon. Escaping the dark Nordic winter, I found myself immersed in the vibrant warmth of these captivating cities. This personal reflection serves as a record of my experiences and emotions during this remarkable journey.
