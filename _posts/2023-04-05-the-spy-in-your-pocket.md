@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "The Spy in Your Pocket: the Data Secrets of Mobile Apps."
+title: "Pocket Spies: The Untold Story of Your Apps."
 author: "Feiyang"
 categories: facts
 tags: [tech,privacy,cs,software]
