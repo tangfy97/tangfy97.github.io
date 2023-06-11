@@ -4,7 +4,7 @@ title: "闪回记忆：鲁汶的那个夏天?"
 author: "飞扬"
 categories: facts
 tags: [memory]
-image: leuvencovid.jpg
+image: leuvencovid19.jpg
 ---
 
 夏季的挪威，烈日如火。室外的温度已高达29度，我有些无所适从。无奈之下，我在小店购置了一台电扇，试图驱散这无法忍受的炎热。而那一瞬间，我突然被拽回到了2020年鲁汶的那个夏天。
