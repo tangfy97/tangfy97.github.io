@@ -11,8 +11,8 @@ plugins:             [jekyll-paginate, jekyll-sitemap, jekyll-feed, jekyll-seo-t
 
 # Customise atom feed settings (this is where Jekyll-Feed gets configuration information)
 title:		           "Wanderlust Chronicles"
-description:	       "chronicles: travels, thoughts, cat and life"
-author:              "Feiyang Tang"
+description:	       "travels, thoughts, cat and life 旅行、思考、猫和生活"
+author:              "Feiyang 飞扬"
 
 # RSS 2.0 can be used instead of Atom by uncommenting following two lines
 #feed:
