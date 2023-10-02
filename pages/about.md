@@ -4,20 +4,39 @@ title: About
 permalink: /about
 ---
 
-## Life in Five Lands: A Multicultural Chronicle
+## Life in Five Lands: A Journey Through Code and Culture
 
-Hey there! I'm Feiyang, a curious soul with a love for exploring new places, sipping coffee, and embracing diverse cultures. Welcome to my online haven, where I share my musings and travel tales.
+Hello and welcome! I'm Feiyang, a curious explorer both in the digital and physical realms. This is my corner of the internet where I share my thoughts on technology, travel, and the many intersections in between.
 
-Over the years, I've found myself drawn to the fascinating connections between technology, society, and our environment. While my background lies in AI and software engineering, my interests span beyond academia.
+### My Journey in Academia and Beyond
 
-Having spent a decade living in five different countries, I've developed a deep appreciation for the beauty of diversity and the importance of integration in our globalized world. I see myself as a reformist and environmentalist, constantly seeking ways to contribute positively to our shared future.
+After earning my Ph.D., I've moved into the software industry, serving as a consultant. My academic background is diverse and interdisciplinary:
 
-When I'm not immersed in coding or tackling research endeavors, I take solace in the simple pleasures of life. You'll often find me brewing a cup of coffee and embarking on solo adventures, discovering hidden gems in unexplored corners.
+- **Bachelor's, University of Auckland, 2019**: [Data Stream Mining](/assets/pdf/UOA_thesis.pdf)
+- **Master's, KU Leuven, 2020**: [Image-Text Alignment](/assets/pdf/KUL_thesis.pdf)
+- **Ph.D., Norwegian University of Science and Technology, 2023**: [Static Analysis for Software Privacy (abstract ONLY before defence)](/assets/pdf/Thesis_abstract.pdf)
 
-My ultimate joy comes from immersing myself in different cultures and engaging in meaningful conversations with people from all walks of life. I'm also a self-confessed museum enthusiast, where I can spend hours getting lost in the timeless beauty of art and sculpture.
+Feel free to explore these areas if they catch your interest.
 
-Through this website, I invite you to join me on a journey of inspiration, introspection, and shared experiences. Here, I pour my thoughts into words, capturing the essence of my global explorations and reflections on the ever-changing world around us.
+### Bridging Disciplines in the Industry
 
-So, grab a cozy cup of your favorite brew, take a deep breath, and join me as we navigate the virtual landscapes of discovery and connection. Feel free to share your stories and insights, for it is through these interactions that we find true enrichment and understanding.
+While I've pivoted towards the software industry, my love for research, new ideas, and innovation remains steadfast. I find immense value in applying my interdisciplinary knowledge—spanning AI, software engineering, and privacy research—to real-world applications.
 
-Thank you for stopping by, and I hope my digital corner brings you moments of tranquility and sparks your own wanderlust. Together, let's celebrate the wonders of our diverse world and embrace the boundless possibilities that lie before us.
+### A Multicultural Lens
+
+Living in five different countries has given me an intricate understanding of the symbiosis between technology and multiculturalism. I value diversity not just as a cultural asset but as a vital ingredient in technological innovation.
+
+### Beyond the Screen
+
+Away from the keyboard, I revel in life's simpler joys. You'll often find me perfecting the art of coffee brewing or setting off on solo adventures to discover the world's hidden treasures.
+
+### Museums and Mindfulness
+
+Museums serve as my sanctuary, where I meander through time and art, enriching both my personal and professional perspectives.
+
+### Engage and Share
+
+This website is a venue for both the technical and the personal, the analytical and the emotional. So go ahead, grab your favorite brew, and let's journey through this complex, beautiful world together. I welcome your stories and viewpoints; they form the fabric of our shared digital narrative.
+
+Thank you for stopping by. May this space offer a moment of inspiration and a spark of curiosity for what lies ahead. Let's navigate the multifaceted worlds of technology and culture, stitching together a future as intricate as the codes we write and the stories we live.
+
