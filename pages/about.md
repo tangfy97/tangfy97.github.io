@@ -12,12 +12,12 @@ Hello and welcome! I'm Feiyang, a curious explorer both in the digital and physi
 
 After finishing my Ph.D., I've moved into the software industry, serving as a consultant. I completed my Ph.D. project as part of a Marie Curie interdisciplinary EU project called Privacy Matters (PriMa). My academic background is diverse and interdisciplinary:
 
-- **Bachelor's, University of Auckland, 2019**: \ 
-[Adaptive Self-Sufficient Itemset Miner for Transactional Data Streams](/assets/pdf/UOA_thesis.pdf)\
-- **Master's, KU Leuven, 2020**: \
-[Image-text Alignment for Artworks](/assets/pdf/KUL_thesis.pdf)\
-- **Ph.D., Norwegian University of Science and Technology, 2023**: \
-[Analyzing Privacy in Software (abstract ONLY before defence)](/assets/pdf/Thesis_abstract.pdf)\
+- **Bachelor's, University of Auckland, 2019**:  
+[Adaptive Self-Sufficient Itemset Miner for Transactional Data Streams](/assets/pdf/UOA_thesis.pdf)  
+- **Master's, KU Leuven, 2020**:  
+[Image-text Alignment for Artworks](/assets/pdf/KUL_thesis.pdf)  
+- **Ph.D., Norwegian University of Science and Technology, 2023**:  
+[Analyzing Privacy in Software (abstract ONLY before defence)](/assets/pdf/Thesis_abstract.pdf)  
 
 Feel free to explore these areas if they catch your interest.
 
