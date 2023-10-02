@@ -10,7 +10,7 @@ Hello and welcome! I'm Feiyang, a curious explorer both in the digital and physi
 
 ### My Journey in Academia and Beyond
 
-After earning my Ph.D., I've moved into the software industry, serving as a consultant. My academic background is diverse and interdisciplinary:
+After finishing my Ph.D., I've moved into the software industry, serving as a consultant. I completed my Ph.D. project as part of a Marie Curie interdisciplinary EU project called Privacy Matters (PriMa). My academic background is diverse and interdisciplinary:
 
 - **Bachelor's, University of Auckland, 2019**: \ 
 [Adaptive Self-Sufficient Itemset Miner for Transactional Data Streams](/assets/pdf/UOA_thesis.pdf)\
@@ -23,7 +23,7 @@ Feel free to explore these areas if they catch your interest.
 
 ### Bridging Disciplines in the Industry
 
-While I've pivoted towards the software industry, my love for research, new ideas, and innovation remains steadfast. I find immense value in applying my interdisciplinary knowledge—spanning AI, software engineering, and privacy research—to real-world applications.
+While I've pivoted towards the software industry, my love for research, new ideas, and innovation remains steadfast. I find immense value in applying my interdisciplinary knowledge-spanning AI, software engineering, and privacy research—to real-world applications.
 
 ### A Multicultural Lens
 
