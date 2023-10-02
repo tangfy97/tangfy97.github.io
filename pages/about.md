@@ -12,9 +12,12 @@ Hello and welcome! I'm Feiyang, a curious explorer both in the digital and physi
 
 After earning my Ph.D., I've moved into the software industry, serving as a consultant. My academic background is diverse and interdisciplinary:
 
-- **Bachelor's, University of Auckland, 2019**: [Data Stream Mining](/assets/pdf/UOA_thesis.pdf)
-- **Master's, KU Leuven, 2020**: [Image-Text Alignment](/assets/pdf/KUL_thesis.pdf)
-- **Ph.D., Norwegian University of Science and Technology, 2023**: [Static Analysis for Software Privacy (abstract ONLY before defence)](/assets/pdf/Thesis_abstract.pdf)
+- **Bachelor's, University of Auckland, 2019**: \ 
+[Adaptive Self-Sufficient Itemset Miner for Transactional Data Streams](/assets/pdf/UOA_thesis.pdf)\
+- **Master's, KU Leuven, 2020**: \
+[Image-text Alignment for Artworks](/assets/pdf/KUL_thesis.pdf)\
+- **Ph.D., Norwegian University of Science and Technology, 2023**: \
+[Analyzing Privacy in Software (abstract ONLY before defence)](/assets/pdf/Thesis_abstract.pdf)\
 
 Feel free to explore these areas if they catch your interest.
 
