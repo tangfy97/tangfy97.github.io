@@ -16,8 +16,8 @@ After finishing my Ph.D., I've moved into the software industry, serving as a co
 [Adaptive Self-Sufficient Itemset Miner for Transactional Data Streams](/assets/pdf/UOA_thesis.pdf)  
 - **Master's, KU Leuven, 2020**:  
 [Image-text Alignment for Artworks](/assets/pdf/KUL_thesis.pdf)  
-- **Ph.D., Norwegian University of Science and Technology, 2023**:  
-[Analyzing Privacy in Software (abstract ONLY before defence)](/assets/pdf/Thesis_abstract.pdf)  
+- **Ph.D., Norwegian University of Science and Technology, 2024**:  
+[Analyzing Privacy in Software](https://hdl.handle.net/11250/3123422)  
 
 Feel free to explore these areas if they catch your interest.
 
