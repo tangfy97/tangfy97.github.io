@@ -10,9 +10,9 @@ Hello and welcome! I'm Feiyang, a curious explorer both in the digital and physi
 
 ### My Journey in Academia and Beyond
 
-After finishing my Ph.D., I've moved into the software industry, serving as a consultant. I completed my Ph.D. project as part of a Marie Curie interdisciplinary EU project called Privacy Matters (PriMa). My academic background is diverse and interdisciplinary:
+After finishing my PhD, I've moved into the software industry, serving as a consultant. I completed my PhD project as part of a Marie Curie interdisciplinary EU project called Privacy Matters (PriMa). My academic background is diverse and interdisciplinary:
 
-- **Bachelor's, University of Auckland, 2019**:  
+- **Bachelor's (Hons), University of Auckland, 2019**:  
 [Adaptive Self-Sufficient Itemset Miner for Transactional Data Streams](/assets/pdf/UOA_thesis.pdf)  
 - **Master's, KU Leuven, 2020**:  
 [Image-text Alignment for Artworks](/assets/pdf/KUL_thesis.pdf)  
