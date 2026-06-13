@@ -1,0 +1,95 @@
+<!doctype html>
+<html lang="en-NZ">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="robots" content="noindex, nofollow">
+    <title>feiyang.log local admin</title>
+    <link rel="stylesheet" href="/styles.css">
+  </head>
+  <body>
+    <main class="shell" data-admin>
+      <aside class="sidebar">
+        <header class="brand">
+          <span class="brand-dot"></span>
+          <div>
+            <strong>feiyang.log</strong>
+            <small>local post room</small>
+          </div>
+        </header>
+
+        <div class="toolbar">
+          <button type="button" data-new>New</button>
+          <button type="button" data-refresh>Refresh</button>
+        </div>
+
+        <label class="search">
+          <span>Search</span>
+          <input type="search" data-search placeholder="title, tag, category">
+        </label>
+
+        <nav class="post-list" data-list aria-label="Posts"></nav>
+      </aside>
+
+      <section class="workspace">
+        <header class="topbar">
+          <div>
+            <p data-file>_posts/new.md</p>
+            <h1 data-heading>New post</h1>
+          </div>
+          <span data-status>locked</span>
+        </header>
+
+        <section class="panel">
+          <div class="fields">
+            <label>
+              <span>Title</span>
+              <input type="text" data-field="title" autocomplete="off">
+            </label>
+            <label>
+              <span>Date</span>
+              <input type="date" data-field="date">
+            </label>
+            <label>
+              <span>Slug</span>
+              <input type="text" data-field="slug" autocomplete="off">
+            </label>
+            <label>
+              <span>Category</span>
+              <input type="text" data-field="category" autocomplete="off">
+            </label>
+            <label>
+              <span>Author</span>
+              <input type="text" data-field="author" autocomplete="off">
+            </label>
+            <label>
+              <span>Tags</span>
+              <input type="text" data-field="tags" autocomplete="off" placeholder="life, privacy">
+            </label>
+            <label class="wide">
+              <span>Image</span>
+              <input type="text" data-field="image" autocomplete="off" placeholder="phd.png">
+            </label>
+          </div>
+        </section>
+
+        <section class="editor-grid">
+          <label class="panel editor">
+            <span>Markdown</span>
+            <textarea data-field="body" spellcheck="true"></textarea>
+          </label>
+
+          <article class="panel preview" data-preview></article>
+        </section>
+
+        <footer class="actions">
+          <button type="button" data-copy>Copy markdown</button>
+          <button type="button" data-download>Download .md</button>
+          <button type="button" class="primary" data-save>Save to _posts</button>
+        </footer>
+      </section>
+    </main>
+
+    <script src="/app.js"></script>
+  </body>
+</html>
