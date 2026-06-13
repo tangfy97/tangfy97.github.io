@@ -6,7 +6,7 @@ permalink: /academic/
 
 ## academic trace
 
-The boring-but-useful version, preserved here for people who reasonably prefer citations over vibes.
+The boring-but-useful version, preserved for people who reasonably prefer citations over vibes.
 
 ### degrees
 
@@ -19,10 +19,10 @@ The boring-but-useful version, preserved here for people who reasonably prefer c
 - **PhD, Norwegian University of Science and Technology, 2024**  
   [Analyzing Privacy in Software](https://hdl.handle.net/11250/3123422)
 
-### research interests
+### old research lane
 
-Privacy in software, mobile app transparency, human-computer interaction, AI-adjacent systems, and the strange social rituals around explaining technical things to non-technical humans.
+My research life sat around software, mobile ecosystems, human-computer interaction, and the strange social rituals around explaining technical things to non-technical humans.
 
 ### current mode
 
-I now work in software consulting. The research brain is still installed, just no longer the only process consuming CPU.
+I now work as a solution engineer on education and research digital infrastructure in the Netherlands. The research brain is still installed; it just no longer gets to monopolise the CPU.

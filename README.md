@@ -1,9 +1,7 @@
-# Life in Five Lands: A Multicultural Chronicle
+# feiyang.log
 
-Join me in my heartfelt exploration of life lived across five diverse countries over the past decade. Through captivating stories and musings, I'll share my experiences, from the joys of cultural immersion to the delightful quirks of everyday life.
+A small personal blog, closer to a public scratchpad than a portfolio.
 
-Along the way, expect to encounter my feline companions, as they playfully weave their tales into the narrative.
+Current mode: solution engineer in the Netherlands, working around education and research digital infrastructure. Former mode: CS PhD. Persistent background process: overthinking in several languages.
 
-Through this chronicle, I aim to celebrate the beauty of multiculturalism and inspire fellow wanderers to embrace the richness of different cultures.
-
-Together, let's embark on a journey of discovery, fostering a deeper appreciation for the interconnectedness of our global community.
+The site keeps notes, travel fragments, mood logs, multilingual debris, and things that would look suspiciously overdressed on LinkedIn.

@@ -6,14 +6,14 @@ permalink: /about/
 
 ## whoami
 
-I write software for a living, overthink for free, and occasionally turn both into blog posts.
+I am a solution engineer in the Netherlands, working around education and research digital infrastructure. Not naming the exact place here; the internet has enough forms already.
 
-Currently: software consultant.  
-Previously: privacy PhD.  
-Permanently: debugging myself in multiple time zones.
+Currently: solution engineer.  
+Previously: CS PhD.  
+Permanently: trying to make systems, sentences, and myself compile.
 
-I have lived in enough countries to make "where are you from?" a non-trivial query, and worked on privacy long enough to distrust most apps and several of my own life choices.
+I have lived in enough countries to make "where are you from?" a non-trivial query. New Zealand softened the edges, Norway taught me weather humility, the Netherlands gave me calendars, and Belgium left me with excellent fries and unresolved bureaucracy.
 
-This site is not a portfolio. It is closer to a public scratchpad: migration notes, privacy thoughts, emotional stack traces, travel fragments, and other unresolved states that do not belong on LinkedIn.
+This site is not a portfolio. 更像一個樹洞 with version control: small notes, travel fragments, mood logs, language debris, and the occasional bug report filed against myself.
 
-If you are here for the formal academic timeline, theses, and research artifacts, there is a more civilized version: [academic trace](/academic/).
+If you are here for the formal academic timeline, theses, and research artefacts, there is a more civilised drawer: [academic trace](/academic/).

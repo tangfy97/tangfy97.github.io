@@ -3,27 +3,21 @@
   color: $brand-color;
   text-align: center;
   min-height: 56px;
-  line-height: 45px;
   width: $container-width;
   margin: 28px 0 16px;
 }
-.footer a {
-  color: $brand-color;
-  padding: 0px 10px 0px;
-  text-decoration: none;
-}
 @media (max-width: $container-width) {
   .footer {
-    background: white;
+    background: transparent;
     color: $brand-color;
     text-align: center;
     min-height: 56px;
-    line-height: 45px;
     width: 95vw;
   }
 }
 .footer-description {
   display: block;
+  padding: 18px 0;
   margin-bottom: 1rem;
   color: $muted-ink;
   font-family: $code-font-family;

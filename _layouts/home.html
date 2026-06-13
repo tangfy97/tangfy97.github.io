@@ -4,79 +4,67 @@ title: Home
 ---
 
 <section class="log-hero" aria-labelledby="home-title">
-  <div class="terminal-block">
-    <div class="terminal-bar" aria-hidden="true">
-      <span></span>
-      <span></span>
-      <span></span>
-      <code>~/feiyang.log</code>
+  <div class="whoami-card">
+    <div class="whoami-main">
+      <div class="card-topline">
+        <span class="dot"></span>
+        <code>~/feiyang.log</code>
+      </div>
+
+      <h1 id="home-title"><span>$</span> whoami</h1>
+
+      <div class="identity-lines">
+        <p><code>&gt;</code> solution engineer, based in NL</p>
+        <p><code>&gt;</code> education &amp; research digital infrastructure</p>
+        <p><code>&gt;</code> ex-PhD; fewer footnotes, same overthinking engine</p>
+        <p><code>&gt;</code> Aotearoa calibrated, Europe patched, coffee-dependent</p>
+      </div>
     </div>
-    <h1 id="home-title"><span>$</span> whoami</h1>
-    <p class="identity-copy">Software consultant, privacy nerd, ex-PhD. Currently in NL; still partly calibrated by Aotearoa weather, public transport, and flat whites.</p>
-    <ul class="identity-chips">
-      <li>privacy</li>
-      <li>software</li>
-      <li>migration</li>
-      <li>debugging self</li>
-    </ul>
-  </div>
-  <aside class="hero-note" aria-label="site notes">
-    <dl>
-      <div>
-        <dt>status</dt>
-        <dd>caffeinated</dd>
-      </div>
-      <div>
-        <dt>mode</dt>
-        <dd>public notebook</dd>
-      </div>
-      <div>
-        <dt>intent</dt>
-        <dd>not a portfolio</dd>
-      </div>
-    </dl>
-    <p>Notes, scraps, and unfinished states. Lightly maintained; emotionally versioned.</p>
-  </aside>
-</section>
 
-<section class="latest-logs" aria-labelledby="latest-title">
-  <div class="home-section-title">
-    <h2 id="latest-title">Latest Notes</h2>
-    <a href="{{ site.github.url }}/posts/">view archive <span aria-hidden="true">-></span></a>
-  </div>
-  <div class="log-card-grid">
-    {% for post in site.posts limit: 3 %}
-      <a class="log-card" href="{{ site.github.url }}{{ post.url }}">
-        {% if post.image %}
-          <div class="log-card-art post-image-art" style="background-image: url('{{ site.github.url }}/assets/img/{{ post.image }}')"></div>
-        {% else %}
-          <div class="log-card-art lake-art"></div>
-        {% endif %}
-        <div class="log-card-body">
-          <h3>{{ post.title }}</h3>
-          <time datetime="{{ post.date | date_to_xmlschema }}">{{ post.date | date: "%Y-%m-%d" }}</time>
-          <p>{{ post.excerpt | strip_html | normalize_whitespace | truncate: 92 }}</p>
-          {% if post.tags.size > 0 %}
-            <div class="tag-row">
-              {% for tag in post.tags limit: 2 %}
-                <span>{{ tag }}</span>
-              {% endfor %}
-            </div>
-          {% endif %}
+    <div class="whoami-side">
+      <dl>
+        <div>
+          <dt>status</dt>
+          <dd>caffeinated</dd>
         </div>
-      </a>
-    {% endfor %}
-  </div>
-</section>
+        <div>
+          <dt>mode</dt>
+          <dd>public scratchpad</dd>
+        </div>
+        <div>
+          <dt>mood</dt>
+          <dd>werkt meestal</dd>
+        </div>
+      </dl>
 
-<section class="quote-panel">
-  <span aria-hidden="true">“</span>
-  <div class="quote-copy">
-    <p>Le passé m’a trompé, le présent me tourmente, et l’avenir m’épouvante.</p>
-    <cite>J.-M. Bouverot, title of the French pamphlet <em>Le passé m’a trompé, le présent me tourmente, et l’avenir m’épouvante</em>, 1799.</cite>
+      <div class="language-row" aria-label="small notes">
+        <span>不是作品集</span>
+        <span>只是樹洞</span>
+        <span>litt trøtt</span>
+        <span>好像還行</span>
+      </div>
+    </div>
+
+    <p class="identity-copy">
+      This is where the public version of my brain leaves sticky notes: small life diffs,
+      migration residue, quiet jokes, bad weather reports, and thoughts that refused to become LinkedIn content.
+    </p>
+
+    <p class="academic-link">
+      If the formal academic trail is what you need, it lives in the tidier drawer:
+      <a href="{{ site.github.url }}/academic/">academic trace</a>.
+    </p>
   </div>
-  <div class="line-landscape" aria-hidden="true">
-    <i></i>
-    <b></b>
-  </div>
+
+  <aside class="quote-panel" aria-label="quote">
+    <span aria-hidden="true">“</span>
+    <div class="quote-copy">
+      <p>Le passé m’a trompé, le présent me tourmente, et l’avenir m’épouvante.</p>
+      <cite>J.-M. Bouverot, title of the French pamphlet <em>Le passé m’a trompé, le présent me tourmente, et l’avenir m’épouvante</em>, 1799.</cite>
+    </div>
+    <div class="quote-footnote">
+      <span>rough translation</span>
+      <p>过去骗过我，现在折磨我，未来看起来也不太会做人。</p>
+    </div>
+  </aside>
 </section>
