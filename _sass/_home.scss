@@ -97,66 +97,80 @@
 
 .identity-lines {
   display: grid;
-  gap: 10px;
-  color: #1f3632;
-  font-size: 13px;
-  line-height: 1.62;
+  gap: 11px;
+  color: #1b302d;
+  font-size: 14px;
+  font-weight: 520;
+  line-height: 1.7;
 }
 
 .identity-lines p {
   margin: 0;
+  display: flex;
+  align-items: baseline;
+  gap: 10px;
 }
 
 .identity-lines code {
-  margin-right: 8px;
-  color: #78958a;
+  min-width: 22px;
+  height: 22px;
+  display: inline-grid;
+  place-items: center;
+  color: #4f746b;
+  background: rgba(220, 232, 225, 0.62);
+  border: 1px solid rgba(90, 106, 99, 0.12);
+  border-radius: 6px;
+  font-size: 12px;
+  line-height: 1;
 }
 
 .whoami-side {
   display: grid;
-  gap: 18px;
+  gap: 20px;
   padding: 4px 0 0 24px;
   border-left: 1px solid rgba(90, 106, 99, 0.14);
 }
 
 .whoami-side dl {
   display: grid;
-  gap: 13px;
+  gap: 14px;
   margin: 0;
 }
 
 .whoami-side dl div {
   display: grid;
-  grid-template-columns: 58px minmax(0, 1fr);
+  grid-template-columns: 64px minmax(0, 1fr);
   gap: 12px;
   align-items: baseline;
 }
 
 .whoami-side dt {
-  color: #596f68;
+  color: #536960;
   font-size: 11px;
+  font-weight: 520;
 }
 
 .whoami-side dd {
   margin: 0;
-  color: #1f3632;
-  font-size: 12px;
+  color: #1b302d;
+  font-size: 13px;
   font-weight: 650;
 }
 
 .language-row {
   display: flex;
   flex-wrap: wrap;
-  gap: 8px;
+  gap: 9px;
 }
 
 .language-row span {
-  padding: 6px 9px;
-  color: #41564f;
-  background: rgba(220, 232, 225, 0.72);
-  border: 1px solid rgba(90, 106, 99, 0.12);
+  padding: 7px 10px;
+  color: #263d38;
+  background: rgba(220, 232, 225, 0.84);
+  border: 1px solid rgba(90, 106, 99, 0.16);
   border-radius: 7px;
-  font-size: 11px;
+  font-size: 12px;
+  font-weight: 520;
   line-height: 1;
 }
 
