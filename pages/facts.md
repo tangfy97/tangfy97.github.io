@@ -1,6 +1,6 @@
 ---
 layout: category
-title: Interesting Facts
+title: Unresolved States
 category: facts
-permalink: /facts
+permalink: /facts/
 ---

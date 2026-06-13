@@ -1,13 +1,17 @@
 <!doctype html>
 <html>
   {% include head.html %}
-  <body>
+  <body{% if page.body_class %} class="{{ page.body_class }}"{% endif %}>
     <div class="container">
-      {% include header.html %}
+      {% unless page.body_class == "admin-page" %}
+        {% include header.html %}
+      {% endunless %}
       <div class="content-wrapper">
         {{ content }}
       </div>
-      {% include footer.html %}
+      {% unless page.body_class == "admin-page" %}
+        {% include footer.html %}
+      {% endunless %}
     </div>
   </body>
 </html>

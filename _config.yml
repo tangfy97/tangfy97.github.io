@@ -6,12 +6,12 @@ paginate:            5
 # Build settings
 markdown:            kramdown
 highlighter:         rouge
-permalink:           /:title
+permalink:           /:title.html
 plugins:             [jekyll-paginate, jekyll-sitemap, jekyll-feed, jekyll-seo-tag]
 
 # Customise atom feed settings (this is where Jekyll-Feed gets configuration information)
-title:		           "Wanderlust Chronicles"
-description:	       "travels, thoughts, cat and life 旅行、思考、猫和生活"
+title:		           "feiyang.log"
+description:	       "privacy, software, migration, and small attempts at belonging"
 author:              "Feiyang 飞扬"
 
 # RSS 2.0 can be used instead of Atom by uncommenting following two lines

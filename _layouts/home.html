@@ -3,20 +3,80 @@ layout: default
 title: Home
 ---
 
-{% for post in paginator.posts %}
-  {% include featured-post.html %}
-{% endfor %}
+<section class="log-hero" aria-labelledby="home-title">
+  <div class="terminal-block">
+    <div class="terminal-bar" aria-hidden="true">
+      <span></span>
+      <span></span>
+      <span></span>
+      <code>~/feiyang.log</code>
+    </div>
+    <h1 id="home-title"><span>$</span> whoami</h1>
+    <p class="identity-copy">Software consultant, privacy nerd, ex-PhD. Currently in NL; still partly calibrated by Aotearoa weather, public transport, and flat whites.</p>
+    <ul class="identity-chips">
+      <li>privacy</li>
+      <li>software</li>
+      <li>migration</li>
+      <li>debugging self</li>
+    </ul>
+  </div>
+  <aside class="hero-note" aria-label="site notes">
+    <dl>
+      <div>
+        <dt>status</dt>
+        <dd>caffeinated</dd>
+      </div>
+      <div>
+        <dt>mode</dt>
+        <dd>public notebook</dd>
+      </div>
+      <div>
+        <dt>intent</dt>
+        <dd>not a portfolio</dd>
+      </div>
+    </dl>
+    <p>Notes, scraps, and unfinished states. Lightly maintained; emotionally versioned.</p>
+  </aside>
+</section>
 
-<!-- Pagination links -->
-<div class="pagination">
-  {% if paginator.next_page %}
-    <a class="pagination-button pagination-active next" href="{{ site.github.url }}{{ paginator.next_page_path }}">{{ site.data.settings.pagination.previous_page }}</a>
-  {% else %}
-    <span class="pagination-button">{{ site.data.settings.pagination.previous_page }}</span>
-  {% endif %}
-  {% if paginator.previous_page %}
-    <a class="pagination-button pagination-active" href="{{ site.baseurl }}{{ paginator.previous_page_path }}">{{ site.data.settings.pagination.next_page }}</a>
-  {% else %}
-    <span class="pagination-button">{{ site.data.settings.pagination.next_page }}</span>
-  {% endif %}
-</div>
+<section class="latest-logs" aria-labelledby="latest-title">
+  <div class="home-section-title">
+    <h2 id="latest-title">Latest Notes</h2>
+    <a href="{{ site.github.url }}/posts/">view archive <span aria-hidden="true">-></span></a>
+  </div>
+  <div class="log-card-grid">
+    {% for post in site.posts limit: 3 %}
+      <a class="log-card" href="{{ site.github.url }}{{ post.url }}">
+        {% if post.image %}
+          <div class="log-card-art post-image-art" style="background-image: url('{{ site.github.url }}/assets/img/{{ post.image }}')"></div>
+        {% else %}
+          <div class="log-card-art lake-art"></div>
+        {% endif %}
+        <div class="log-card-body">
+          <h3>{{ post.title }}</h3>
+          <time datetime="{{ post.date | date_to_xmlschema }}">{{ post.date | date: "%Y-%m-%d" }}</time>
+          <p>{{ post.excerpt | strip_html | normalize_whitespace | truncate: 92 }}</p>
+          {% if post.tags.size > 0 %}
+            <div class="tag-row">
+              {% for tag in post.tags limit: 2 %}
+                <span>{{ tag }}</span>
+              {% endfor %}
+            </div>
+          {% endif %}
+        </div>
+      </a>
+    {% endfor %}
+  </div>
+</section>
+
+<section class="quote-panel">
+  <span aria-hidden="true">“</span>
+  <div class="quote-copy">
+    <p>Le passé m’a trompé, le présent me tourmente, et l’avenir m’épouvante.</p>
+    <cite>J.-M. Bouverot, title of the French pamphlet <em>Le passé m’a trompé, le présent me tourmente, et l’avenir m’épouvante</em>, 1799.</cite>
+  </div>
+  <div class="line-landscape" aria-hidden="true">
+    <i></i>
+    <b></b>
+  </div>
+</section>

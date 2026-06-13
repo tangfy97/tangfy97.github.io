@@ -1,0 +1,22 @@
+---
+layout: default
+---
+
+<section class="posts-index" aria-labelledby="posts-title">
+  <div class="category-header">
+    <p>newest first</p>
+    <h1 id="posts-title">{{ page.title }}</h1>
+  </div>
+
+  <div class="post-list">
+    {% for post in site.posts %}
+      <a class="archive-row" href="{{ site.github.url }}{{ post.url }}">
+        <time datetime="{{ post.date | date_to_xmlschema }}">{{ post.date | date: "%Y-%m-%d" }}</time>
+        <span>{{ post.title }}</span>
+        {% if post.categories.size > 0 %}
+          <small>{{ post.categories | first }}</small>
+        {% endif %}
+      </a>
+    {% endfor %}
+  </div>
+</section>

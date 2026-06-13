@@ -2,6 +2,10 @@
   Reset some basic elements
 */
 
+html {
+  scroll-padding-top: 110px;
+}
+
 body, h1, h2, h3, h4, h5, h6,
 p, blockquote, pre, hr,
 dl, dd, ol, ul, figure {
@@ -40,21 +44,29 @@ h4, h5, h6 {
 /* Body */
 body {
   font-family: $base-font-family;
+  background:
+    linear-gradient(rgba(80, 108, 99, 0.055) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(80, 108, 99, 0.045) 1px, transparent 1px),
+    radial-gradient(circle at top left, rgba(215, 229, 222, 0.9), transparent 34rem),
+    $page-bg;
+  background-size: 28px 28px, 28px 28px, auto, auto;
+  color: $ink-color;
+  font-size: 17px;
 }
 body img {
-  align: middle;
-  margin: 5px auto auto auto;
+  margin: 1.4rem auto;
   display: block;
-  max-width: 600px;
+  max-width: 100%;
+  border-radius: 8px;
 }
 
 p {
   display: block;
-  margin-top: 1em;
-  margin-bottom: 1em;
+  margin-top: 1.05em;
+  margin-bottom: 1.05em;
   margin-left: 0;
   margin-right: 0;
-  line-height: 1.65;
+  line-height: 1.74;
   font-family: $body-font-family;
 }
 
@@ -90,6 +102,8 @@ dd {
 a {
   color: $brand-color;
   text-decoration: none;
+  text-decoration-thickness: 1px;
+  text-underline-offset: 0.18em;
 }
 
 /*
@@ -97,11 +111,13 @@ a {
 */
 
 blockquote {
-  margin: 10px 20px 10px;
-  padding: 0px 15px;
-  border-left: 0.25em solid #ccc;
-  color: #999;
-  line-height: 1.5;
+  margin: 1.5rem 0;
+  padding: 0.1rem 1.2rem;
+  border-left: 0.2em solid $accent-color;
+  color: $muted-ink;
+  line-height: 1.65;
+  background: rgba(248, 250, 247, 0.58);
+  border-radius: 0 8px 8px 0;
 }
 
 /**
@@ -114,7 +130,7 @@ table {
 }
 
 table, th, td {
-  border: 1px solid black;
+  border: 1px solid $line-color;
 }
 th, td {
   padding: 15px;

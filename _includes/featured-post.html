@@ -1,7 +1,18 @@
-<article>
-  <a href="{{ site.github.url }}{{ post.url }}">
-    <div class="featured-post" {% if post.image %}style="background-image:url({{ site.github.url }}/assets/img/{{ post.image }})"{% endif %}>
-      <h2><span>{{ post.title }}</span></h2>
+<article class="featured-post">
+  <a href="{{ site.github.url }}{{ post.url }}" class="post-card-link">
+    <div class="post-card-media" {% if post.image %}style="background-image:url({{ site.github.url }}/assets/img/{{ post.image }})"{% endif %}></div>
+    <div class="post-card-body">
+      <div class="post-card-meta">
+        <span>{{ post.date | date: "%Y.%m.%d" }}</span>
+        {% if post.categories.size > 0 %}
+          <span>{{ post.categories | first }}</span>
+        {% endif %}
+        {% if post.tags.size > 0 %}
+          <span>{{ post.tags | first }}</span>
+        {% endif %}
+      </div>
+      <h2>{{ post.title }}</h2>
+      <p>{{ post.excerpt | strip_html | normalize_whitespace | truncate: 170 }}</p>
     </div>
   </a>
 </article>

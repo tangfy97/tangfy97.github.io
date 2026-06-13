@@ -11,13 +11,13 @@
   text-decoration: underline;
 }
 .content-wrapper {
-  padding-top: $header-thickness+10px;
+  padding-top: $header-thickness+34px;
   margin: auto;
   display: block;
   width: $container-width - 20px;
 }
 .content-wrapper h1 {
-  margin: 20px 0px 5px;
+  margin: 20px 0 5px;
 }
 @media (max-width: $container-width) {
   .container {
@@ -26,7 +26,7 @@
     margin-right: auto;
   }
   .content-wrapper {
-    padding-top: $header-thickness+10px;
+    padding-top: $header-thickness+24px;
     margin: auto;
     display: block;
     width: 95vw;
