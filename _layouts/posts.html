@@ -4,17 +4,30 @@ layout: default
 
 <section class="posts-index" aria-labelledby="posts-title">
   <div class="category-header">
-    <p>newest first</p>
+    <p>notes / newest first</p>
     <h1 id="posts-title">{{ page.title }}</h1>
+    <span>{{ site.posts | size }} entries, roughly maintained</span>
   </div>
 
   <div class="post-list">
     {% for post in site.posts %}
       <a class="archive-row" href="{{ site.github.url }}{{ post.url }}">
-        <time datetime="{{ post.date | date_to_xmlschema }}">{{ post.date | date: "%Y-%m-%d" }}</time>
-        <span>{{ post.title }}</span>
-        {% if post.categories.size > 0 %}
-          <small>{{ post.categories | first }}</small>
+        <div class="archive-date">
+          <time datetime="{{ post.date | date_to_xmlschema }}">{{ post.date | date: "%Y-%m-%d" }}</time>
+          {% if post.categories.size > 0 %}
+            <small>{{ post.categories | first }}</small>
+          {% endif %}
+        </div>
+        <div class="archive-copy">
+          <h2>{{ post.title }}</h2>
+          <p>{{ post.excerpt | strip_html | normalize_whitespace | truncate: 150 }}</p>
+        </div>
+        {% if post.tags.size > 0 %}
+          <div class="archive-tags">
+            {% for tag in post.tags limit: 3 %}
+              <span>{{ tag }}</span>
+            {% endfor %}
+          </div>
         {% endif %}
       </a>
     {% endfor %}

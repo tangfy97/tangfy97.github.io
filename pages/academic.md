@@ -25,4 +25,4 @@ My research life sat around software, mobile ecosystems, human-computer interact
 
 ### current mode
 
-I now work as a solution engineer on education and research digital infrastructure in the Netherlands. The research brain is still installed; it just no longer gets to monopolise the CPU.
+I now work on education and research digital infrastructure in the Netherlands. The research brain is still installed; it just no longer gets to monopolise the CPU.

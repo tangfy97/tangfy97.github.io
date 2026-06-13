@@ -10,14 +10,23 @@
 }
 
 .page-content h1 {
-  font-size: unquote("clamp(2.2rem, 5vw, 4rem)");
-  line-height: 0.98;
+  margin-bottom: 2rem;
+  color: #172f2d;
+  font-family: $code-font-family;
+  font-size: unquote("clamp(1.55rem, 3vw, 2rem)");
+  font-weight: 650;
+  line-height: 1.05;
   letter-spacing: 0;
 }
 
 .page-content h2,
 .post-content h2 {
   margin-top: 2rem;
+  color: #25302d;
+  font-family: $code-font-family;
+  font-size: 1.12rem;
+  font-weight: 650;
+  line-height: 1.25;
 }
 
 .page-content code,
@@ -29,47 +38,65 @@
 
 .posts-index,
 .category-header {
-  max-width: 860px;
+  max-width: 980px;
   margin: 24px auto 0;
 }
 
 .category-header {
-  padding: 8px 0 22px;
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto;
+  gap: 8px 18px;
+  align-items: end;
+  padding: 8px 0 18px;
 }
 
 .category-header p {
-  margin: 0 0 8px;
+  grid-column: 1 / -1;
+  margin: 0;
   color: $muted-ink;
   font-family: $code-font-family;
-  font-size: 12px;
+  font-size: 11px;
 }
 
 .category-header h1 {
   margin: 0;
-  color: #142d47;
-  font-size: unquote("clamp(2rem, 5vw, 3.2rem)");
-  line-height: 1;
+  color: #172f2d;
+  font-family: $code-font-family;
+  font-size: unquote("clamp(1.55rem, 3vw, 2rem)");
+  font-weight: 650;
+  line-height: 1.05;
   letter-spacing: 0;
+}
+
+.category-header span {
+  color: $muted-ink;
+  font-family: $code-font-family;
+  font-size: 11px;
 }
 
 .post-list {
   display: grid;
-  gap: 10px;
+  gap: 12px;
 }
 
 .archive-row {
   display: grid;
-  grid-template-columns: 104px minmax(0, 1fr) 80px;
-  gap: 18px;
-  align-items: baseline;
+  grid-template-columns: 118px minmax(0, 1fr) 178px;
+  gap: 20px;
+  align-items: center;
+  min-height: 112px;
   padding: 18px 20px;
   color: $ink-color;
-  background: rgba(250, 252, 249, 0.78);
+  background:
+    linear-gradient(180deg, rgba(255, 255, 255, 0.68), rgba(247, 250, 247, 0.78)),
+    rgba(250, 252, 249, 0.86);
   border: 1px solid $line-color;
   border-radius: 8px;
-  box-shadow: 0 10px 26px rgba(70, 86, 79, 0.07);
+  box-shadow:
+    0 1px 0 rgba(255, 255, 255, 0.82) inset,
+    0 12px 32px rgba(70, 86, 79, 0.08);
   text-decoration: none !important;
-  transition: transform 160ms ease, border-color 160ms ease, box-shadow 160ms ease;
+  transition: transform 160ms ease, border-color 160ms ease, box-shadow 160ms ease, background 160ms ease;
 }
 
 .archive-row:hover {
@@ -78,25 +105,76 @@
   transform: translateY(-2px);
 }
 
-.archive-row time,
-.archive-row small {
+.archive-date {
+  display: grid;
+  gap: 8px;
+}
+
+.archive-date time,
+.archive-date small {
   color: $muted-ink;
   font-family: $code-font-family;
   font-size: 11px;
 }
 
-.archive-row span {
+.archive-date small {
+  width: fit-content;
+  padding: 5px 8px;
+  color: #52675f;
+  background: rgba(220, 232, 225, 0.7);
+  border: 1px solid rgba(90, 106, 99, 0.1);
+  border-radius: 7px;
+  line-height: 1;
+}
+
+.archive-copy {
+  min-width: 0;
+}
+
+.archive-copy h2 {
+  margin: 0 0 8px;
   overflow: hidden;
-  color: #203958;
-  font-size: 16px;
+  color: #1f3632;
+  font-family: $base-font-family;
+  font-size: 1rem;
   font-weight: 650;
-  line-height: 1.35;
+  line-height: 1.28;
   text-overflow: ellipsis;
   white-space: nowrap;
 }
 
-.archive-row small {
-  justify-self: end;
+.archive-copy p {
+  margin: 0;
+  color: #52675f;
+  font-family: $code-font-family;
+  font-size: 11px;
+  line-height: 1.68;
+  display: -webkit-box;
+  overflow: hidden;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+}
+
+.archive-tags {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+  gap: 7px;
+}
+
+.archive-tags span {
+  max-width: 88px;
+  overflow: hidden;
+  padding: 6px 8px;
+  color: #52675f;
+  background: rgba(220, 232, 225, 0.58);
+  border: 1px solid rgba(90, 106, 99, 0.1);
+  border-radius: 7px;
+  font-family: $code-font-family;
+  font-size: 10px;
+  line-height: 1;
+  text-overflow: ellipsis;
+  white-space: nowrap;
 }
 
 .featured-post {
@@ -161,6 +239,10 @@
     margin-top: 10px;
   }
 
+  .category-header {
+    grid-template-columns: 1fr;
+  }
+
   .archive-row,
   .post-card-link {
     grid-template-columns: 1fr;
@@ -171,12 +253,12 @@
     padding: 16px;
   }
 
-  .archive-row span {
+  .archive-copy h2 {
     white-space: normal;
   }
 
-  .archive-row small {
-    justify-self: start;
+  .archive-tags {
+    justify-content: flex-start;
   }
 
   .post-card-media {

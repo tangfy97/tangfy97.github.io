@@ -6,9 +6,9 @@ permalink: /about/
 
 ## whoami
 
-I am a solution engineer in the Netherlands, working around education and research digital infrastructure. Not naming the exact place here; the internet has enough forms already.
+I work in the Netherlands making practical things happen around education and research digital infrastructure. On forms this may be called "solution engineer"; in real life it is often closer to translating between people, systems, and whatever decided to fail five minutes before a meeting.
 
-Currently: solution engineer.  
+Currently: professionally creating solutions, allegedly.  
 Previously: CS PhD.  
 Permanently: trying to make systems, sentences, and myself compile.
 
