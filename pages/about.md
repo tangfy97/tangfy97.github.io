@@ -4,8 +4,6 @@ title: about
 permalink: /about/
 ---
 
-## whoami
-
 I work in the Netherlands making practical things happen around education and research digital infrastructure. On forms this may be called "solution engineer"; in real life it is often closer to translating between people, systems, and whatever decided to fail five minutes before a meeting.
 
 Currently: professionally creating solutions, allegedly.  

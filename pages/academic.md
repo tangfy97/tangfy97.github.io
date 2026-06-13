@@ -4,8 +4,6 @@ title: academic trace
 permalink: /academic/
 ---
 
-## academic trace
-
 The boring-but-useful version, preserved for people who reasonably prefer citations over vibes.
 
 ### degrees
@@ -21,8 +19,8 @@ The boring-but-useful version, preserved for people who reasonably prefer citati
 
 ### old research lane
 
-My research life sat around software, mobile ecosystems, human-computer interaction, and the strange social rituals around explaining technical things to non-technical humans.
+My research life sat around software engineering, software privacy, big data mining, and the awkward intersection where GDPR, tech law, and actual systems engineering all try to pretend they speak the same language.
 
 ### current mode
 
-I now work on education and research digital infrastructure in the Netherlands. The research brain is still installed; it just no longer gets to monopolise the CPU.
+After the PhD, I spent a few years in software consultancy: the professional sport of joining a meeting, discovering three hidden systems, two undocumented assumptions, and one spreadsheet that somehow runs the business. I now work on education and research digital infrastructure in the Netherlands. The research brain is still installed; it just no longer gets to monopolise the CPU.
