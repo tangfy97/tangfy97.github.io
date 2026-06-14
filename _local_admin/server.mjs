@@ -146,7 +146,6 @@ const parseFrontMatter = (content, file) => {
     title: front.title || file.replace(/^\d{4}-\d{2}-\d{2}-/, "").replace(/\.md$/, ""),
     date: fileMatch ? fileMatch[1] : "",
     slug: fileMatch ? fileMatch[2] : "",
-    category: front.categories || "facts",
     author: front.author || "Feiyang",
     tags,
     image: front.image || "",
@@ -162,8 +161,7 @@ const markdownFor = (entry) => {
     "---",
     "layout: post",
     `title: ${yamlQuote(entry.title)}`,
-    `author: ${yamlQuote(entry.author || "Feiyang")}`,
-    `categories: ${entry.category || "facts"}`
+    `author: ${yamlQuote(entry.author || "Feiyang")}`
   ];
 
   if (tags.length) {
@@ -191,7 +189,6 @@ const listPosts = async () => {
       file,
       title: post.title,
       date: post.date,
-      category: post.category,
       tags: post.tags
     };
   }));
@@ -241,7 +238,6 @@ const handleApi = async (req, res, url) => {
     const entry = await readRequestJson(req);
     const date = String(entry.date || "").trim();
     const slug = slugify(entry.slug || entry.title);
-    const category = String(entry.category || "facts").trim();
 
     if (!/^\d{4}-\d{2}-\d{2}$/.test(date)) {
       json(res, 400, { error: "Date must be YYYY-MM-DD." });
@@ -253,13 +249,8 @@ const handleApi = async (req, res, url) => {
       return;
     }
 
-    if (!/^[a-z0-9_-]+$/.test(category)) {
-      json(res, 400, { error: "Category must be a simple token." });
-      return;
-    }
-
     const file = safePostFile(`${date}-${slug}.md`);
-    await writeFile(path.join(POSTS_DIR, file), markdownFor({ ...entry, date, slug, category }), "utf8");
+    await writeFile(path.join(POSTS_DIR, file), markdownFor({ ...entry, date, slug }), "utf8");
     json(res, 200, { file, path: `_posts/${file}` });
     return;
   }

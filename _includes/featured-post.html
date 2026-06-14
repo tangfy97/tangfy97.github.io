@@ -4,9 +4,6 @@
     <div class="post-card-body">
       <div class="post-card-meta">
         <span>{{ post.date | date: "%Y.%m.%d" }}</span>
-        {% if post.categories.size > 0 %}
-          <span>{{ post.categories | first }}</span>
-        {% endif %}
         {% if post.tags.size > 0 %}
           <span>{{ post.tags | first }}</span>
         {% endif %}

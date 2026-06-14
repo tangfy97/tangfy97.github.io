@@ -95,7 +95,6 @@
     title: fields.title.value.trim() || "Untitled",
     date: fields.date.value || today,
     slug: slugify(fields.slug.value || fields.title.value),
-    category: fields.category.value.trim() || "facts",
     author: fields.author.value.trim() || "Feiyang",
     tags: fields.tags.value.split(",").map((tag) => tag.trim()).filter(Boolean),
     image: fields.image.value.trim(),
@@ -110,8 +109,7 @@
       "---",
       "layout: post",
       `title: ${quote(entry.title)}`,
-      `author: ${quote(entry.author)}`,
-      `categories: ${entry.category}`
+      `author: ${quote(entry.author)}`
     ];
 
     if (entry.tags.length) lines.push(`tags: [${entry.tags.map(quote).join(", ")}]`);
@@ -178,7 +176,6 @@
     fields.title.value = post.title || "";
     fields.date.value = post.date || today;
     fields.slug.value = post.slug || slugify(post.title);
-    fields.category.value = post.category || "facts";
     fields.author.value = post.author || "Feiyang";
     fields.tags.value = (post.tags || []).join(", ");
     fields.image.value = post.image || "";
@@ -191,7 +188,7 @@
     list.innerHTML = "";
     posts
       .filter((post) => {
-        const haystack = `${post.title} ${post.category} ${(post.tags || []).join(" ")}`.toLowerCase();
+        const haystack = `${post.title} ${(post.tags || []).join(" ")}`.toLowerCase();
         return haystack.includes(query);
       })
       .forEach((post) => {
@@ -200,7 +197,7 @@
         button.className = `post-item${post.file === activeFile ? " active" : ""}`;
         button.innerHTML = [
           `<strong>${escapeHtml(post.title)}</strong>`,
-          `<small>${escapeHtml(post.date)} / ${escapeHtml(post.category)}</small>`
+          `<small>${escapeHtml(post.date)} / ${(post.tags || []).map(escapeHtml).join(", ")}</small>`
         ].join("");
         button.addEventListener("click", async () => {
           setStatus("loading");
@@ -233,7 +230,6 @@
       title: "Untitled",
       date: today,
       slug: "new-post",
-      category: "facts",
       author: "Feiyang",
       tags: ["emotional-debugging"],
       image: "",

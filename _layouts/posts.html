@@ -24,9 +24,6 @@ layout: default
       <a class="archive-row" href="{{ site.github.url }}{{ post.url }}" data-post-tags="{{ post.tags | join: ',' }}">
         <div class="archive-date">
           <time datetime="{{ post.date | date_to_xmlschema }}">{{ post.date | date: "%Y-%m-%d" }}</time>
-          {% if post.categories.size > 0 %}
-            <small>{{ post.categories | first }}</small>
-          {% endif %}
         </div>
         <div class="archive-copy">
           <h2>{{ post.title }}</h2>

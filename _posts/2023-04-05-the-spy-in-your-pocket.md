@@ -2,7 +2,6 @@
 layout: post
 title: "Pocket Spies: The Untold Story of Your Apps."
 author: "Feiyang"
-categories: facts
 tags: [digital-rights, academic-trace]
 image: mobile.jpg
 ---
