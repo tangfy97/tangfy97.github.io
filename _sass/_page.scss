@@ -138,6 +138,10 @@
   transition: transform 160ms ease, border-color 160ms ease, box-shadow 160ms ease, background 160ms ease;
 }
 
+.archive-row.is-filtered-out {
+  display: none;
+}
+
 .archive-row:hover {
   border-color: rgba(93, 126, 115, 0.28);
   box-shadow: 0 16px 38px rgba(70, 86, 79, 0.12);

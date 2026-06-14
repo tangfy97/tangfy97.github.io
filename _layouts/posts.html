@@ -58,7 +58,7 @@ layout: default
 
       rows.forEach(function (row) {
         var tags = (row.getAttribute("data-post-tags") || "").split(",");
-        row.hidden = tag !== "all" && tags.indexOf(tag) === -1;
+        row.classList.toggle("is-filtered-out", tag !== "all" && tags.indexOf(tag) === -1);
       });
     };
 
