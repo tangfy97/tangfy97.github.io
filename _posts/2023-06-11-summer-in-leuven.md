@@ -3,7 +3,7 @@ layout: post
 title: "闪回记忆：鲁汶的那个夏天?"
 author: "飞扬"
 categories: facts
-tags: [belgium, pandemic-years, summer, memory]
+tags: [time-memory, academic-trace, netherlands]
 image: leuvencovid19.jpg
 ---
 

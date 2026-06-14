@@ -3,7 +3,7 @@ layout: post
 title: "夏日感悟，寫在去荷蘭之前。"
 author: "飞扬"
 categories: facts
-tags: [migration, belonging, netherlands, life-transition]
+tags: [migration, belonging, netherlands]
 image: life.jpg
 ---
 

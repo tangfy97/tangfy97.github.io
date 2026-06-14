@@ -3,7 +3,7 @@ layout: post
 title: "Unraveling the World and Self in 2022"
 author: "Feiyang"
 categories: facts
-tags: [travelogue, self-discovery, europe, netherlands]
+tags: [travelogue, netherlands, belonging]
 image: tromso.jpg
 ---
 

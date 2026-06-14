@@ -3,7 +3,7 @@ layout: post
 title: "Escaping the Nordic Darkness"
 author: "Feiyang"
 categories: travel
-tags: [winter-escape, iberia, food-and-cafes, travelogue]
+tags: [travelogue, nordic-years, coffee-food]
 image: alicante.jpg
 ---
 

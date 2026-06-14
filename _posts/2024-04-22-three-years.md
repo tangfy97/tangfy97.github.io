@@ -3,7 +3,7 @@ layout: post
 title: "Journey Through Uncertainty: Reflections on a Transformative Three-Year PhD Experience"
 author: "an expat with a PhD"
 categories: facts
-tags: [phd-life, academia, migration, time]
+tags: [academic-trace, migration, time-memory]
 image: phd.png
 ---
 

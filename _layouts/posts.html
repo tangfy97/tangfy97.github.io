@@ -9,33 +9,19 @@ layout: default
     <span>{{ site.posts | size }} entries, roughly maintained</span>
   </div>
 
-  {% if site.data.tag_taxonomy.groups %}
-    <aside class="tag-legend" aria-label="Tag vocabulary">
-      <div class="tag-legend-intro">
-        <p>tag vocabulary</p>
-        <span>not SEO. just drawers for recurring damage.</span>
-      </div>
-      <div class="tag-legend-groups">
-        {% for group in site.data.tag_taxonomy.groups %}
-          <section class="tag-legend-group">
-            <h2>{{ group.name }}</h2>
-            {% if group.note %}
-              <p>{{ group.note }}</p>
-            {% endif %}
-            <div class="tag-legend-tags">
-              {% for tag in group.tags %}
-                <span>{{ tag }}</span>
-              {% endfor %}
-            </div>
-          </section>
-        {% endfor %}
-      </div>
-    </aside>
+  {% assign theme_tags = site.data.tag_taxonomy.groups | first %}
+  {% if theme_tags.tags %}
+    <nav class="tag-filter" aria-label="Filter posts by tag">
+      <button type="button" class="active" data-tag-filter="all">all</button>
+      {% for tag in theme_tags.tags %}
+        <button type="button" data-tag-filter="{{ tag }}">{{ tag }}</button>
+      {% endfor %}
+    </nav>
   {% endif %}
 
-  <div class="post-list">
+  <div class="post-list" data-post-list>
     {% for post in site.posts %}
-      <a class="archive-row" href="{{ site.github.url }}{{ post.url }}">
+      <a class="archive-row" href="{{ site.github.url }}{{ post.url }}" data-post-tags="{{ post.tags | join: ',' }}">
         <div class="archive-date">
           <time datetime="{{ post.date | date_to_xmlschema }}">{{ post.date | date: "%Y-%m-%d" }}</time>
           {% if post.categories.size > 0 %}
@@ -57,3 +43,29 @@ layout: default
     {% endfor %}
   </div>
 </section>
+
+<script>
+  (function () {
+    var buttons = Array.prototype.slice.call(document.querySelectorAll("[data-tag-filter]"));
+    var rows = Array.prototype.slice.call(document.querySelectorAll("[data-post-tags]"));
+
+    if (!buttons.length || !rows.length) return;
+
+    var applyFilter = function (tag) {
+      buttons.forEach(function (button) {
+        button.classList.toggle("active", button.getAttribute("data-tag-filter") === tag);
+      });
+
+      rows.forEach(function (row) {
+        var tags = (row.getAttribute("data-post-tags") || "").split(",");
+        row.hidden = tag !== "all" && tags.indexOf(tag) === -1;
+      });
+    };
+
+    buttons.forEach(function (button) {
+      button.addEventListener("click", function () {
+        applyFilter(button.getAttribute("data-tag-filter"));
+      });
+    });
+  })();
+</script>
