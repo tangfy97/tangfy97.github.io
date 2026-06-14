@@ -3,7 +3,7 @@ layout: post
 title: "Ingen tråder igjen"
 author: "Feiyang"
 tags: [netherlands, nordic-years, work-after-phd, time-memory]
-image: ingen-trader-igjen.png
+image: ingen-trader-igjen.webp
 ---
 
 最近又开始学荷兰语。
