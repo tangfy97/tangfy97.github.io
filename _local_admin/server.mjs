@@ -7,6 +7,7 @@ import { randomBytes } from "node:crypto";
 const ROOT = path.resolve(process.cwd());
 const ADMIN_DIR = path.join(ROOT, "_local_admin");
 const POSTS_DIR = path.join(ROOT, "_posts");
+const TAXONOMY_FILE = path.join(ROOT, "_data", "tag_taxonomy.yml");
 const HOST = "127.0.0.1";
 const PORT = Number(process.env.PORT || 8787);
 const KEY = randomBytes(24).toString("base64url");
@@ -76,6 +77,45 @@ const slugify = (value) => {
 };
 
 const yamlQuote = (value) => `"${String(value || "").replace(/"/g, '\\"')}"`;
+
+const unquoteYaml = (value) => String(value || "").trim().replace(/^"(.*)"$/, "$1");
+
+const parseTaxonomy = (content) => {
+  const groups = [];
+  let current = null;
+  let readingTags = false;
+
+  content.split("\n").forEach((line) => {
+    const trimmed = line.trim();
+    if (!trimmed || trimmed === "groups:") return;
+
+    if (trimmed.startsWith("- name:")) {
+      current = { name: unquoteYaml(trimmed.slice(7)), note: "", tags: [] };
+      groups.push(current);
+      readingTags = false;
+      return;
+    }
+
+    if (!current) return;
+
+    if (trimmed.startsWith("note:")) {
+      current.note = unquoteYaml(trimmed.slice(5));
+      readingTags = false;
+      return;
+    }
+
+    if (trimmed === "tags:") {
+      readingTags = true;
+      return;
+    }
+
+    if (readingTags && trimmed.startsWith("- ")) {
+      current.tags.push(unquoteYaml(trimmed.slice(2)));
+    }
+  });
+
+  return groups;
+};
 
 const parseFrontMatter = (content, file) => {
   const match = content.match(/^---\n([\s\S]*?)\n---\n?/);
@@ -181,6 +221,12 @@ const handleApi = async (req, res, url) => {
 
   if (req.method === "GET" && url.pathname === "/api/posts") {
     json(res, 200, { posts: await listPosts() });
+    return;
+  }
+
+  if (req.method === "GET" && url.pathname === "/api/taxonomy") {
+    const content = await readFile(TAXONOMY_FILE, "utf8");
+    json(res, 200, { groups: parseTaxonomy(content) });
     return;
   }
 

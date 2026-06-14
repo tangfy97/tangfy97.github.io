@@ -9,3 +9,5 @@ node _local_admin/server.mjs
 ```
 
 Open the URL printed by the server. The URL contains a one-time local key. The server binds to `127.0.0.1` and only writes files inside `_posts/*.md`.
+
+The tag chips in the editor are loaded from `_data/tag_taxonomy.yml`. Add new canonical tags there first, then use them when creating or editing posts.

@@ -3,7 +3,7 @@ layout: post
 title: "解放自己"
 author: "一個內耗糾結的infj"
 categories: facts
-tags: [facts,personal,life]
+tags: [friendship, boundaries, emotional-debugging, letting-go]
 image: overthinking.png
 ---
 

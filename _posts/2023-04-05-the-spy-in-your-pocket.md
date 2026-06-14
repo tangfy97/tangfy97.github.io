@@ -3,7 +3,7 @@ layout: post
 title: "Pocket Spies: The Untold Story of Your Apps."
 author: "Feiyang"
 categories: facts
-tags: [tech,privacy,cs,software]
+tags: [software-privacy, app-behaviour, digital-rights, research]
 image: mobile.jpg
 ---
 

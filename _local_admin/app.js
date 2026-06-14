@@ -20,9 +20,11 @@
   const fileLabel = root.querySelector("[data-file]");
   const heading = root.querySelector("[data-heading]");
   const preview = root.querySelector("[data-preview]");
+  const tagPalette = root.querySelector("[data-tag-palette]");
   const today = new Date().toISOString().slice(0, 10);
   let posts = [];
   let activeFile = "";
+  let taxonomy = [];
 
   const starterBody = [
     "## note",
@@ -54,6 +56,23 @@
       .replace(/[\s_-]+/g, "-")
       .replace(/^-+|-+$/g, "");
     return slug || "new-post";
+  };
+
+  const selectedTags = () => fields.tags.value
+    .split(",")
+    .map((tag) => tag.trim())
+    .filter(Boolean);
+
+  const setSelectedTags = (tags) => {
+    fields.tags.value = Array.from(new Set(tags)).join(", ");
+    update();
+  };
+
+  const toggleTag = (tag) => {
+    const tags = selectedTags();
+    setSelectedTags(tags.includes(tag)
+      ? tags.filter((item) => item !== tag)
+      : [...tags, tag]);
   };
 
   const api = async (path, options) => {
@@ -119,6 +138,28 @@
     .replace(/`([^`]+)`/g, "<code>$1</code>")
     .replace(/\[([^\]]+)\]\(([^)]+)\)/g, '<a href="$2">$1</a>');
 
+  const renderTagPalette = () => {
+    if (!tagPalette) return;
+    const selected = new Set(selectedTags());
+    tagPalette.innerHTML = taxonomy.map((group) => {
+      const chips = (group.tags || []).map((tag) => [
+        `<button type="button" class="tag-chip${selected.has(tag) ? " active" : ""}" data-tag="${escapeHtml(tag)}">`,
+        `${escapeHtml(tag)}</button>`
+      ].join("")).join("");
+
+      return [
+        '<section class="tag-group">',
+        `<strong>${escapeHtml(group.name)}</strong>`,
+        `<div class="tag-chips">${chips}</div>`,
+        '</section>'
+      ].join("");
+    }).join("");
+
+    tagPalette.querySelectorAll("[data-tag]").forEach((button) => {
+      button.addEventListener("click", () => toggleTag(button.dataset.tag));
+    });
+  };
+
   const update = () => {
     const entry = current();
     const file = fileFor(entry);
@@ -129,6 +170,7 @@
       `<p><code>_posts/${escapeHtml(file)}</code></p>`,
       renderMarkdown(entry.body)
     ].join("");
+    renderTagPalette();
   };
 
   const fill = (post) => {
@@ -179,6 +221,12 @@
     setStatus(`${posts.length} posts`);
   };
 
+  const loadTaxonomy = async () => {
+    const data = await api("/api/taxonomy");
+    taxonomy = data.groups || [];
+    renderTagPalette();
+  };
+
   const newPost = () => {
     activeFile = "";
     fill({
@@ -187,7 +235,7 @@
       slug: "new-post",
       category: "facts",
       author: "Feiyang",
-      tags: ["personal"],
+      tags: ["emotional-debugging"],
       image: "",
       body: starterBody
     });
@@ -238,6 +286,6 @@
     setStatus("missing key");
   } else {
     newPost();
-    refresh().catch((error) => setStatus(error.message));
+    Promise.all([refresh(), loadTaxonomy()]).catch((error) => setStatus(error.message));
   }
 })();

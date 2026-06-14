@@ -9,6 +9,30 @@ layout: default
     <span>{{ site.posts | size }} entries, roughly maintained</span>
   </div>
 
+  {% if site.data.tag_taxonomy.groups %}
+    <aside class="tag-legend" aria-label="Tag vocabulary">
+      <div class="tag-legend-intro">
+        <p>tag vocabulary</p>
+        <span>not SEO. just drawers for recurring damage.</span>
+      </div>
+      <div class="tag-legend-groups">
+        {% for group in site.data.tag_taxonomy.groups %}
+          <section class="tag-legend-group">
+            <h2>{{ group.name }}</h2>
+            {% if group.note %}
+              <p>{{ group.note }}</p>
+            {% endif %}
+            <div class="tag-legend-tags">
+              {% for tag in group.tags %}
+                <span>{{ tag }}</span>
+              {% endfor %}
+            </div>
+          </section>
+        {% endfor %}
+      </div>
+    </aside>
+  {% endif %}
+
   <div class="post-list">
     {% for post in site.posts %}
       <a class="archive-row" href="{{ site.github.url }}{{ post.url }}">

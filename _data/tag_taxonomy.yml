@@ -1,0 +1,58 @@
+groups:
+  - name: place
+    note: "where the weather or paperwork happened"
+    tags:
+      - aotearoa
+      - belgium
+      - east-asia
+      - europe
+      - iberia
+      - netherlands
+      - norway
+      - sweden
+  - name: life-state
+    note: "soft failures, migration side effects, human firmware"
+    tags:
+      - belonging
+      - boundaries
+      - emotional-debugging
+      - family
+      - friendship
+      - homesickness
+      - identity
+      - immigration
+      - letting-go
+      - life-transition
+      - migration
+      - self-discovery
+      - solitude
+  - name: work-research
+    note: "old lab ghosts and post-PhD incident reports"
+    tags:
+      - academia
+      - app-behaviour
+      - career-absurdism
+      - digital-rights
+      - industry-life
+      - job-market
+      - phd-life
+      - post-phd
+      - research
+      - software-privacy
+  - name: travel-mode
+    note: "movement, weather, meals, and suspiciously important coffee"
+    tags:
+      - coffee-culture
+      - food-and-cafes
+      - solo-travel
+      - travelogue
+      - winter-escape
+  - name: memory
+    note: "what the cache refuses to evict"
+    tags:
+      - language-and-place
+      - memory
+      - pandemic-years
+      - politics
+      - summer
+      - time

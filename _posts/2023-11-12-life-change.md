@@ -3,7 +3,7 @@ layout: post
 title: "Autumn Musings"
 author: "a fresh PhD grad"
 categories: facts
-tags: [facts,personal,life]
+tags: [industry-life, post-phd, netherlands, norway]
 image: norwayandnl.png
 ---
 
@@ -31,4 +31,3 @@ This journey, from academia to industry and from the snowy Nordic to windy lowla
 Here's to embracing the beauty of each season, to learning and growing, and to finding joy in both the familiar and the new.
 
 从学术界到业界，从北欧之旅再至西欧，这一路的蜿蜒使我深感：终究又回到了欧洲的起点。记得四五年前，我从新西兰这太平洋的一隅起航，经过30多小时的长途跋涉，抵达初秋的比利时，欧洲的心脏。如今，秋意正浓之际，我再次踏足西欧，回归荷语区的怀抱。命运似乎总在与我们玩着捉迷藏，我所能做的，便是在这场游戏中寻找最大的快乐。
-

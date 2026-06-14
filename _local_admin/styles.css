@@ -226,6 +226,49 @@ label.wide {
   grid-column: span 3;
 }
 
+.tag-palette {
+  display: grid;
+  gap: 10px;
+  padding: 14px;
+  background: rgba(255, 255, 255, 0.38);
+  border: 1px solid var(--line);
+  border-radius: 8px;
+}
+
+.tag-group {
+  display: grid;
+  gap: 7px;
+}
+
+.tag-group strong {
+  color: var(--muted);
+  font-family: var(--mono);
+  font-size: 10px;
+  font-weight: 700;
+}
+
+.tag-chips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+}
+
+button.tag-chip {
+  min-height: 28px;
+  padding: 0 9px;
+  color: #50645f;
+  background: rgba(220, 232, 225, 0.48);
+  border-color: rgba(74, 89, 83, 0.13);
+  font-family: var(--mono);
+  font-size: 10px;
+  font-weight: 600;
+}
+
+button.tag-chip.active {
+  color: #fbfcfa;
+  background: #607f75;
+}
+
 .editor-grid {
   display: grid;
   grid-template-columns: minmax(0, 1.1fr) minmax(320px, 0.9fr);

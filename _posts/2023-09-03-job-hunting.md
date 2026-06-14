@@ -3,7 +3,7 @@ layout: post
 title: "Navigating Norway's Job Market: A Tale of High Hopes, Curveballs, and Unforgettable Moments?"
 author: "asian job seeker"
 categories: facts
-tags: [facts,personal,life]
+tags: [job-market, norway, career-absurdism, immigration]
 image: norwayjob.png
 ---
 
