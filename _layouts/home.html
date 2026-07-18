@@ -3,69 +3,30 @@ layout: default
 title: Home
 ---
 
+{% assign latest_post = site.posts.first %}
+
 <section class="log-hero" aria-labelledby="home-title">
-  <div class="whoami-card">
-    <div class="whoami-main">
-      <div class="card-topline">
-        <span class="dot"></span>
-        <code>~/feiyang.log</code>
-      </div>
+  <div class="home-intro">
+    <p class="home-path"><span aria-hidden="true"></span><code>~/feiyang.log</code></p>
+    <h1 id="home-title"><span aria-hidden="true">$</span> whoami</h1>
 
-      <h1 id="home-title"><span>$</span> whoami</h1>
-
-      <div class="identity-lines">
-        <p><code>&gt;</code> i help education &amp; research infrastructure behave, allegedly</p>
-        <p><code>&gt;</code> public sector now; consultancy scars still cached</p>
-        <p><code>&gt;</code> ex-PhD; same overthinking engine, fewer citation emergencies</p>
-        <p><code>&gt;</code> Aotearoa compiled, Norway closed, Netherlands still loading</p>
-      </div>
+    <div class="identity-lines">
+      <p>I help education &amp; research infrastructure behave, allegedly.</p>
+      <p>Ex-PhD. Public sector now. Consultancy scars still cached.</p>
     </div>
 
-    <div class="whoami-side">
-      <dl>
-        <div>
-          <dt>status</dt>
-          <dd>windblown</dd>
-        </div>
-        <div>
-          <dt>mode</dt>
-          <dd>public scratchpad</dd>
-        </div>
-        <div>
-          <dt>mood</dt>
-          <dd>det går bra</dd>
-        </div>
-      </dl>
-
-      <div class="language-row" aria-label="small notes">
-        <span>不是作品集</span>
-        <span>只是樹洞</span>
-        <span>Nederland laadt...</span>
-        <span>挪威已归档</span>
-      </div>
-    </div>
-
-    <p class="identity-copy">
-      This is where my public brain leaves small logs: migration residue,
-      Dutch-learning errors, infrastructure feelings, bad weather reports,
-      and thoughts too unserious for LinkedIn but too persistent to ignore.
-    </p>
-
-    <p class="academic-link">
-      If you need the formal academic trail, it lives in the tidier drawer:
-      <a href="{{ site.github.url }}/academic/">academic trace</a>.
-    </p>
+    <p class="home-note">寫遷徙、基礎設施、壞天氣，還有一些不宜寫進績效回顧的想法。</p>
   </div>
 
-  <aside class="quote-panel" aria-label="quote">
-    <span aria-hidden="true">“</span>
-    <div class="quote-copy">
-      <p>Le passé m’a trompé, le présent me tourmente, et l’avenir m’épouvante.</p>
-      <cite>J.-M. Bouverot, title of the French pamphlet <em>Le passé m’a trompé, le présent me tourmente, et l’avenir m’épouvante</em>, 1799.</cite>
-    </div>
-    <div class="quote-footnote">
-      <span>rough translation</span>
-      <p>过去骗过我，现在折磨我，未来看起来也不太会做人。</p>
-    </div>
-  </aside>
+  {% if latest_post %}
+    <a class="latest-log" href="{{ latest_post.url | relative_url }}" aria-label="Read latest log: {{ latest_post.title }}">
+      <div class="latest-log-meta">
+        <span>latest log</span>
+        <time datetime="{{ latest_post.date | date_to_xmlschema }}">{{ latest_post.date | date: "%Y.%m.%d" }}</time>
+      </div>
+      <h2>{{ latest_post.title }}</h2>
+      <p>{{ latest_post.excerpt | strip_html | strip_newlines | truncate: 155 }}</p>
+      <span class="latest-log-read">read entry <span aria-hidden="true">↗</span></span>
+    </a>
+  {% endif %}
 </section>

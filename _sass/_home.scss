@@ -1,290 +1,155 @@
 .log-hero {
+  width: 100%;
+  max-width: 900px;
   display: grid;
-  gap: 18px;
-  margin: 18px 0 34px;
+  gap: unquote("clamp(48px, 9vw, 104px)");
+  margin: unquote("clamp(48px, 10vw, 118px)") 0 unquote("clamp(54px, 10vw, 112px)");
 }
 
-.whoami-card,
-.quote-panel {
-  position: relative;
-  background:
-    linear-gradient(180deg, rgba(255, 255, 255, 0.72), rgba(247, 250, 247, 0.82)),
-    rgba(250, 252, 249, 0.9);
-  border: 1px solid rgba(90, 106, 99, 0.18);
-  border-radius: 8px;
-  box-shadow:
-    0 1px 0 rgba(255, 255, 255, 0.82) inset,
-    0 20px 52px rgba(56, 72, 66, 0.11);
-  backdrop-filter: blur(16px);
-  overflow: hidden;
+.home-intro {
+  max-width: 790px;
 }
 
-.whoami-card {
-  min-height: 270px;
-  display: grid;
-  grid-template-columns: minmax(0, 1fr) 286px;
-  gap: 24px;
-  align-items: start;
-  padding: 30px 34px;
-}
-
-.whoami-main,
-.whoami-side,
-.identity-copy,
-.academic-link,
-.quote-copy,
-.quote-footnote {
-  position: relative;
-  z-index: 1;
-}
-
-.card-topline {
+.home-path {
   display: flex;
   align-items: center;
-  gap: 10px;
-  margin-bottom: 24px;
-  color: #4f625c;
+  gap: 11px;
+  margin: 0 0 25px;
+  color: #536b63;
+  font-family: $code-font-family;
+  font-size: 12px;
 }
 
-.dot {
+.home-path span {
   width: 9px;
   height: 9px;
   background: #71879a;
   border-radius: 999px;
-  box-shadow: 20px 0 0 #9aaca5, 40px 0 0 #d4dfd8;
+  box-shadow: 18px 0 0 #a3b4ac, 36px 0 0 #d4dfd8;
 }
 
-.card-topline code,
-.whoami-card h1,
-.identity-lines,
-.whoami-side,
-.language-row,
-.academic-link,
-.quote-panel p,
-.quote-panel cite,
-.quote-footnote {
+.home-path code {
+  margin-left: 38px;
+}
+
+.home-intro h1 {
+  margin: 0;
+  color: #162f2a;
   font-family: $code-font-family;
-}
-
-.card-topline code {
-  margin-left: 46px;
-  font-size: 12px;
-}
-
-.whoami-card h1 {
-  margin: 0 0 20px;
-  color: #172f2d;
-  font-size: 26px;
+  font-size: unquote("clamp(3rem, 8vw, 6.4rem)");
   font-weight: 650;
-  line-height: 1.1;
-  letter-spacing: 0;
+  letter-spacing: -0.085em;
+  line-height: 0.9;
 }
 
-.whoami-card h1 span {
-  color: #78958a;
-  margin-right: 8px;
+.home-intro h1 span {
+  color: #79988b;
+  letter-spacing: -0.12em;
 }
 
 .identity-lines {
   display: grid;
-  gap: 11px;
-  color: #1b302d;
-  font-size: 14px;
+  gap: 8px;
+  max-width: 690px;
+  margin-top: unquote("clamp(31px, 5vw, 48px)");
+  color: #244039;
+  font-family: $code-font-family;
+  font-size: unquote("clamp(0.94rem, 1.8vw, 1.12rem)");
   font-weight: 520;
-  line-height: 1.7;
+  line-height: 1.62;
 }
 
-.identity-lines p {
+.identity-lines p,
+.home-note,
+.latest-log p {
   margin: 0;
-  display: flex;
-  align-items: baseline;
+}
+
+.home-note {
+  max-width: 560px;
+  margin-top: 24px;
+  color: #4f665e;
+  font-family: $body-font-family;
+  font-size: 15px;
+  line-height: 1.75;
+}
+
+.latest-log {
+  max-width: 700px;
+  display: grid;
   gap: 10px;
+  padding: 22px 0 24px;
+  color: #263f39;
+  border-top: 1px solid rgba(70, 96, 87, 0.28);
+  border-bottom: 1px solid rgba(70, 96, 87, 0.18);
+  text-decoration: none !important;
+  transition: border-color 160ms ease, transform 160ms ease;
 }
 
-.identity-lines code {
-  min-width: 22px;
-  height: 22px;
-  display: inline-grid;
-  place-items: center;
-  color: #4f746b;
-  background: rgba(220, 232, 225, 0.62);
-  border: 1px solid rgba(90, 106, 99, 0.12);
-  border-radius: 6px;
-  font-size: 12px;
-  line-height: 1;
+.latest-log:hover {
+  border-color: #638176;
+  transform: translateX(8px);
 }
 
-.whoami-side {
-  display: grid;
-  gap: 20px;
-  padding: 4px 0 0 24px;
-  border-left: 1px solid rgba(90, 106, 99, 0.14);
-}
-
-.whoami-side dl {
-  display: grid;
-  gap: 14px;
-  margin: 0;
-}
-
-.whoami-side dl div {
-  display: grid;
-  grid-template-columns: 64px minmax(0, 1fr);
-  gap: 12px;
-  align-items: baseline;
-}
-
-.whoami-side dt {
-  color: #536960;
-  font-size: 11px;
-  font-weight: 520;
-}
-
-.whoami-side dd {
-  margin: 0;
-  color: #1b302d;
-  font-size: 13px;
-  font-weight: 650;
-}
-
-.language-row {
+.latest-log-meta {
   display: flex;
-  flex-wrap: wrap;
-  gap: 9px;
+  justify-content: space-between;
+  gap: 20px;
+  color: #627970;
+  font-family: $code-font-family;
+  font-size: 10px;
+  font-weight: 650;
+  letter-spacing: 0.075em;
+  text-transform: uppercase;
 }
 
-.language-row span {
-  padding: 7px 10px;
-  color: #263d38;
-  background: rgba(220, 232, 225, 0.84);
-  border: 1px solid rgba(90, 106, 99, 0.16);
-  border-radius: 7px;
-  font-size: 12px;
-  font-weight: 520;
-  line-height: 1;
+.latest-log h2 {
+  margin: 7px 0 0;
+  color: #1b3530;
+  font-family: $base-font-family;
+  font-size: unquote("clamp(1.45rem, 3.2vw, 2.15rem)");
+  font-weight: 650;
+  letter-spacing: -0.04em;
+  line-height: 1.1;
 }
 
-.identity-copy {
-  grid-column: 1 / -1;
-  max-width: 760px;
-  margin: 8px 0 0;
-  color: #334944;
+.latest-log p {
+  max-width: 620px;
+  color: #506861;
   font-family: $body-font-family;
   font-size: 15px;
   line-height: 1.72;
 }
 
-.academic-link {
-  grid-column: 1 / -1;
-  max-width: 760px;
-  margin: 0;
-  padding-top: 16px;
-  color: #4d625b;
-  border-top: 1px solid rgba(90, 106, 99, 0.14);
-  font-size: 12px;
-  line-height: 1.7;
-}
-
-.academic-link a {
-  color: #315f54;
-  text-decoration-thickness: 1px;
-  text-underline-offset: 4px;
-}
-
-.quote-panel {
-  min-height: 156px;
-  display: grid;
-  grid-template-columns: 42px minmax(0, 1fr) 260px;
-  gap: 18px;
-  align-items: center;
-  padding: 24px 32px;
-}
-
-.quote-panel > span {
-  align-self: start;
-  color: #b6c5be;
-  font-family: $body-font-family;
-  font-size: 48px;
-  line-height: 1;
-}
-
-.quote-copy {
-  display: grid;
-  gap: 9px;
-}
-
-.quote-panel p {
-  margin: 0;
-  color: #1e3834;
-  font-family: $body-font-family;
-  font-size: 18px;
-  line-height: 1.58;
-}
-
-.quote-panel cite {
-  max-width: 620px;
-  color: #52675f;
-  font-size: 11px;
-  font-style: normal;
-  line-height: 1.7;
-}
-
-.quote-panel cite em {
-  font-style: italic;
-}
-
-.quote-footnote {
-  display: grid;
-  gap: 8px;
-  padding-left: 22px;
-  color: #4f625c;
-  border-left: 1px solid rgba(90, 106, 99, 0.14);
-}
-
-.quote-footnote span {
+.latest-log-read {
+  margin-top: 7px;
+  color: #3b685b;
   font-family: $code-font-family;
-  font-size: 10px;
-  text-transform: lowercase;
+  font-size: 11px;
+  font-weight: 650;
 }
 
-.quote-footnote p {
-  color: #314a44;
-  font-family: $body-font-family;
-  font-size: 13px;
-  line-height: 1.75;
+@media (max-width: 560px) {
+  .log-hero {
+    gap: 54px;
+    margin-top: 52px;
+  }
+
+  .home-intro h1 {
+    font-size: unquote("clamp(3rem, 15vw, 4.4rem)");
+  }
+
+  .identity-lines {
+    margin-top: 30px;
+  }
+
+  .latest-log:hover {
+    transform: none;
+  }
 }
 
-.topic-grid,
-.section-heading,
-.pagination {
-  display: none;
-}
-
-@media (max-width: 860px) {
-  .whoami-card,
-  .quote-panel {
-    grid-template-columns: 1fr;
-    padding: 26px 22px;
-  }
-
-  .whoami-side {
-    padding: 16px 0 0;
-    border-left: 0;
-    border-top: 1px solid rgba(90, 106, 99, 0.14);
-  }
-
-  .identity-copy,
-  .academic-link {
-    grid-column: auto;
-  }
-
-  .quote-panel > span {
-    display: none;
-  }
-
-  .quote-footnote {
-    padding: 14px 0 0;
-    border-left: 0;
-    border-top: 1px solid rgba(90, 106, 99, 0.14);
+@media (prefers-reduced-motion: reduce) {
+  .latest-log {
+    transition: none;
   }
 }
