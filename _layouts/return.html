@@ -4,10 +4,6 @@
   <body class="return-page">
     <div class="return-shell">
       <header class="return-header">
-        <a class="return-mark" href="{{ site.github.url }}/" aria-label="{{ site.title }} home">
-          <span aria-hidden="true"></span>
-          <strong>{{ site.title }}</strong>
-        </a>
         <nav class="return-language" aria-label="{{ page.language_switch_label | default: 'Language' }}">
           <a href="{{ site.github.url }}/return/?lang=en" lang="en" hreflang="en"{% if page.lang == 'en' %} aria-current="page"{% endif %}>EN</a>
           <a href="{{ site.github.url }}/return/zh/" lang="zh-CN" hreflang="zh-CN"{% if page.lang == 'zh-CN' %} aria-current="page"{% endif %}>中文</a>
@@ -15,16 +11,8 @@
       </header>
 
       <main class="return-main" id="main-content">
-        <div class="return-card">
-          {{ content }}
-        </div>
+        {{ content }}
       </main>
-
-      <footer class="return-footer">
-        <span>{{ site.title }}</span>
-        <span aria-hidden="true">·</span>
-        <a href="{{ site.github.url }}/">{{ page.back_label | default: 'back to notes' }}</a>
-      </footer>
     </div>
     <script>
       (function () {
