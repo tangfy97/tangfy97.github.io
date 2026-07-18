@@ -1,14 +1,14 @@
 <!doctype html>
-<html>
+<html lang="{{ page.lang | default: 'en' }}">
   {% include head.html %}
   <body{% if page.body_class %} class="{{ page.body_class }}"{% endif %}>
     <div class="container">
       {% unless page.body_class == "admin-page" %}
         {% include header.html %}
       {% endunless %}
-      <div class="content-wrapper">
+      <main class="content-wrapper" id="main-content">
         {{ content }}
-      </div>
+      </main>
       {% unless page.body_class == "admin-page" %}
         {% include footer.html %}
       {% endunless %}

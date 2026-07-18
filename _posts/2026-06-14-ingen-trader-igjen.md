@@ -4,6 +4,7 @@ title: "Ingen tråder igjen"
 author: "Feiyang"
 tags: [netherlands, nordic-years, work-after-phd, time-memory]
 image: ingen-trader-igjen.webp
+image_alt: "Karl Johans gate in Oslo on a clear day"
 ---
 
 最近又开始学荷兰语。

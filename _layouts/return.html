@@ -1,0 +1,66 @@
+<!doctype html>
+<html lang="{{ page.lang | default: 'en' }}">
+  {% include head.html %}
+  <body class="return-page">
+    <div class="return-shell">
+      <header class="return-header">
+        <a class="return-mark" href="{{ site.github.url }}/" aria-label="{{ site.title }} home">
+          <span aria-hidden="true"></span>
+          <strong>{{ site.title }}</strong>
+        </a>
+        <nav class="return-language" aria-label="{{ page.language_switch_label | default: 'Language' }}">
+          <a href="{{ site.github.url }}/return/?lang=en" lang="en" hreflang="en"{% if page.lang == 'en' %} aria-current="page"{% endif %}>EN</a>
+          <a href="{{ site.github.url }}/return/zh/" lang="zh-CN" hreflang="zh-CN"{% if page.lang == 'zh-CN' %} aria-current="page"{% endif %}>中文</a>
+        </nav>
+      </header>
+
+      <main class="return-main" id="main-content">
+        <div class="return-card">
+          {{ content }}
+        </div>
+      </main>
+
+      <footer class="return-footer">
+        <span>{{ site.title }}</span>
+        <span aria-hidden="true">·</span>
+        <a href="{{ site.github.url }}/">{{ page.back_label | default: 'back to notes' }}</a>
+      </footer>
+    </div>
+    <script>
+      (function () {
+        var forceEnglish = new URLSearchParams(window.location.search).get('lang') === 'en';
+        var locale = (navigator.language || '').toLowerCase();
+
+        if (document.documentElement.lang === 'en' && !forceEnglish && locale.indexOf('zh') === 0) {
+          window.location.replace('{{ site.github.url }}/return/zh/');
+        }
+      })();
+
+      (function () {
+        var buttons = document.querySelectorAll("[data-copy-value]");
+
+        buttons.forEach(function (button) {
+          button.addEventListener("click", function () {
+            var value = button.getAttribute("data-copy-value");
+            var success = button.getAttribute("data-copy-success");
+            var fallback = button.getAttribute("data-copy-fallback");
+
+            if (!navigator.clipboard) {
+              window.prompt(fallback, value);
+              return;
+            }
+
+            navigator.clipboard.writeText(value).then(function () {
+              button.textContent = success;
+              window.setTimeout(function () {
+                button.textContent = button.getAttribute("data-copy-label");
+              }, 1800);
+            }).catch(function () {
+              window.prompt(fallback, value);
+            });
+          });
+        });
+      })();
+    </script>
+  </body>
+</html>

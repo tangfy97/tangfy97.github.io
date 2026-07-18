@@ -23,3 +23,8 @@
   font-family: $code-font-family;
   font-size:0.72rem;
 }
+
+.footer-description a {
+  color: $accent-deep;
+  text-underline-offset: 0.24em;
+}

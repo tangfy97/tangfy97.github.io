@@ -12,9 +12,9 @@ layout: default
   {% assign theme_tags = site.data.tag_taxonomy.groups | first %}
   {% if theme_tags.tags %}
     <nav class="tag-filter" aria-label="Filter posts by tag">
-      <button type="button" class="active" data-tag-filter="all">all</button>
+      <button type="button" class="active" data-tag-filter="all" aria-pressed="true">all</button>
       {% for tag in theme_tags.tags %}
-        <button type="button" data-tag-filter="{{ tag }}">{{ tag }}</button>
+        <button type="button" data-tag-filter="{{ tag }}" aria-pressed="false">{{ tag }}</button>
       {% endfor %}
     </nav>
   {% endif %}
@@ -50,7 +50,9 @@ layout: default
 
     var applyFilter = function (tag) {
       buttons.forEach(function (button) {
-        button.classList.toggle("active", button.getAttribute("data-tag-filter") === tag);
+        var isActive = button.getAttribute("data-tag-filter") === tag;
+        button.classList.toggle("active", isActive);
+        button.setAttribute("aria-pressed", String(isActive));
       });
 
       rows.forEach(function (row) {

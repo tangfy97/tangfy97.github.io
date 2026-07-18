@@ -28,16 +28,6 @@
   padding: 30px 34px;
 }
 
-.whoami-card::before,
-.quote-panel::before {
-  content: "";
-  position: absolute;
-  inset: 18px;
-  border: 1px solid rgba(90, 106, 99, 0.08);
-  border-radius: 7px;
-  pointer-events: none;
-}
-
 .whoami-main,
 .whoami-side,
 .identity-copy,
@@ -275,11 +265,6 @@
   .quote-panel {
     grid-template-columns: 1fr;
     padding: 26px 22px;
-  }
-
-  .whoami-card::before,
-  .quote-panel::before {
-    inset: 14px;
   }
 
   .whoami-side {

@@ -9,11 +9,41 @@
     {% endfor %}
   </nav>
   <div class="dropdown">
-    <button class="dropbtn" aria-label="menu"><span aria-hidden="true">menu</span></button>
-    <div class="dropdown-content">
+    <button class="dropbtn" type="button" aria-label="Open navigation" aria-expanded="false" aria-controls="mobile-menu"><span aria-hidden="true">menu</span></button>
+    <nav class="dropdown-content" id="mobile-menu" aria-label="Mobile navigation" hidden>
       {% for item in site.data.settings.menu %}
         <a href="{{ site.github.url }}/{{ item.url }}" class="menu-link">{{ item.name }}</a>
       {% endfor %}
-    </div>
+    </nav>
   </div>
 </header>
+
+<script>
+  (function () {
+    var button = document.querySelector(".dropbtn");
+    var menu = document.getElementById("mobile-menu");
+
+    if (!button || !menu) return;
+
+    var setOpen = function (isOpen) {
+      button.setAttribute("aria-expanded", String(isOpen));
+      button.setAttribute("aria-label", isOpen ? "Close navigation" : "Open navigation");
+      menu.hidden = !isOpen;
+    };
+
+    button.addEventListener("click", function () {
+      setOpen(button.getAttribute("aria-expanded") !== "true");
+    });
+
+    menu.addEventListener("click", function (event) {
+      if (event.target.closest("a")) setOpen(false);
+    });
+
+    document.addEventListener("keydown", function (event) {
+      if (event.key === "Escape") {
+        setOpen(false);
+        button.focus();
+      }
+    });
+  })();
+</script>
