@@ -3,32 +3,13 @@
 */
 
 .container {
-  width: $container-width;
-  margin-left: auto;
-  margin-right: auto;
-}
-.container a {
-  text-decoration: underline;
+  width: 100%;
+  max-width: $container-width;
+  margin: 0 auto;
+  padding: 40px 24px 0;
+  box-sizing: border-box;
 }
 .content-wrapper {
-  padding-top: $header-thickness+34px;
-  margin: auto;
   display: block;
-  width: $container-width - 20px;
-}
-.content-wrapper h1 {
-  margin: 20px 0 5px;
-}
-@media (max-width: $container-width) {
-  .container {
-    width: 95vw;
-    margin-left: auto;
-    margin-right: auto;
-  }
-  .content-wrapper {
-    padding-top: $header-thickness+24px;
-    margin: auto;
-    display: block;
-    width: 95vw;
-  }
+  padding-top: 56px;
 }

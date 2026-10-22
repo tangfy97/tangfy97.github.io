@@ -96,6 +96,7 @@
     date: fields.date.value || today,
     slug: slugify(fields.slug.value || fields.title.value),
     author: fields.author.value.trim() || "Feiyang",
+    lang: fields.lang.value.trim(),
     tags: fields.tags.value.split(",").map((tag) => tag.trim()).filter(Boolean),
     image: fields.image.value.trim(),
     body: fields.body.value
@@ -112,6 +113,7 @@
       `author: ${quote(entry.author)}`
     ];
 
+    if (entry.lang) lines.push(`lang: ${entry.lang}`);
     if (entry.tags.length) lines.push(`tags: [${entry.tags.map(quote).join(", ")}]`);
     if (entry.image) lines.push(`image: ${entry.image}`);
     lines.push("---", "", entry.body.trim(), "");
@@ -177,6 +179,7 @@
     fields.date.value = post.date || today;
     fields.slug.value = post.slug || slugify(post.title);
     fields.author.value = post.author || "Feiyang";
+    fields.lang.value = post.lang || "";
     fields.tags.value = (post.tags || []).join(", ");
     fields.image.value = post.image || "";
     fields.body.value = post.body || starterBody;
@@ -231,6 +234,7 @@
       date: today,
       slug: "new-post",
       author: "Feiyang",
+      lang: "en",
       tags: ["emotional-debugging"],
       image: "",
       body: starterBody

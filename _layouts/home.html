@@ -3,30 +3,111 @@ layout: default
 title: Home
 ---
 
-{% assign latest_post = site.posts.first %}
+{% assign entry_limit = 6 %}
+{% assign en_posts = site.posts | where: "lang", "en" %}
+{% assign zh_posts = site.posts | where: "lang", "zh" %}
+{% assign mixed_posts = site.posts | where: "lang", "en+zh" %}
+{% assign more_count = site.posts.size | minus: entry_limit %}
 
-<section class="log-hero" aria-labelledby="home-title">
-  <div class="home-intro">
-    <p class="home-path"><span aria-hidden="true"></span><code>~/feiyang.log</code></p>
-    <h1 id="home-title"><span aria-hidden="true">$</span> whoami</h1>
-
-    <div class="identity-lines">
-      <p>I help education &amp; research infrastructure behave, allegedly.</p>
-      <p>Ex-PhD. Public sector now. Consultancy scars still cached.</p>
+<div class="man">
+  <section class="man-section" aria-labelledby="man-name">
+    <h1 id="man-name">NAME</h1>
+    <div class="man-body">
+      <p><b>feiyang</b>, 飞扬<br>— helps education &amp; research infrastructure behave, allegedly</p>
     </div>
+  </section>
 
-    <p class="home-note">寫遷徙、基礎設施、壞天氣，還有一些不宜寫進績效回顧的想法。</p>
-  </div>
+  <section class="man-section" aria-labelledby="man-synopsis">
+    <h2 id="man-synopsis">SYNOPSIS</h2>
+    <div class="man-body">
+      <p><b>feiyang</b> [<u>--ex-phd</u>] [<u>--public-sector</u>] [<u>--lang</u>=en,zh,no,nl<span class="man-muted">(wip)</span>] [<u>file</u> ...]</p>
+    </div>
+  </section>
 
-  {% if latest_post %}
-    <a class="latest-log" href="{{ latest_post.url | relative_url }}" aria-label="Read latest log: {{ latest_post.title }}">
-      <div class="latest-log-meta">
-        <span>latest log</span>
-        <time datetime="{{ latest_post.date | date_to_xmlschema }}">{{ latest_post.date | date: "%Y.%m.%d" }}</time>
+  <section class="man-section" aria-labelledby="man-description">
+    <h2 id="man-description">DESCRIPTION</h2>
+    <div class="man-body">
+      <p>Works on education and research digital infrastructure in the Netherlands. On forms: <i>solution engineer</i>. In practice: translating between people, systems, and whatever decided to fail five minutes before a meeting. Ex-PhD in software privacy; consultancy scars still cached.</p>
+      <p>Not a portfolio. 更像一個樹洞 with version control.</p>
+    </div>
+  </section>
+
+  <section class="man-section" aria-labelledby="man-options">
+    <h2 id="man-options">OPTIONS</h2>
+    <div class="man-body man-rows">
+      <a class="man-row" href="{{ site.github.url }}/posts/#lang=en"><b class="man-key">-l en</b><span>entries in English <span class="man-muted">({{ en_posts.size }})</span></span></a>
+      <a class="man-row" href="{{ site.github.url }}/posts/#lang=zh"><b class="man-key">-l zh</b><span>中文的條目 <span class="man-muted">({{ zh_posts.size }})</span></span></a>
+      <a class="man-row" href="{{ site.github.url }}/posts/#lang=en+zh"><b class="man-key">-l en+zh</b><span>both, interleaved <span class="man-muted">({{ mixed_posts.size }})</span></span></a>
+      <a class="man-row" href="{{ site.github.url }}/posts/"><b class="man-key">-t tag</b><span>by topic: migration, nordic-years, academic-trace, ...</span></a>
+    </div>
+  </section>
+
+  {% if page.status %}
+    <section class="man-section" aria-labelledby="man-status">
+      <h2 id="man-status">STATUS</h2>
+      <div class="man-body">
+        <p>{{ page.status }}</p>
+        <p class="man-note">last updated {{ page.status_updated }} · entries arrive irregularly</p>
       </div>
-      <h2>{{ latest_post.title }}</h2>
-      <p>{{ latest_post.excerpt | strip_html | strip_newlines | truncate: 155 }}</p>
-      <span class="latest-log-read">read entry <span aria-hidden="true">↗</span></span>
-    </a>
+    </section>
   {% endif %}
-</section>
+
+  <section class="man-section" aria-labelledby="man-entries">
+    <h2 id="man-entries">ENTRIES</h2>
+    <div class="man-body man-entries">
+      {% for post in site.posts limit: entry_limit %}
+        <a class="man-entry" href="{{ post.url | relative_url }}">
+          <time datetime="{{ post.date | date_to_xmlschema }}">{{ post.date | date: "%Y-%m-%d" }}</time>
+          <span class="man-entry-lang">{{ post.lang }}</span>
+          <span class="man-entry-title">{{ post.title }}{% unless post.author == "Feiyang" or post.author == "飞扬" or post.author == nil %} <span class="man-entry-alias">— as {{ post.author }}</span>{% endunless %}</span>
+        </a>
+      {% endfor %}
+      {% if more_count > 0 %}
+        <a class="man-entry man-entry-more" href="{{ site.github.url }}/posts/">
+          <span>...</span>
+          <span class="man-entry-title">{{ more_count }} more — see posts(7)</span>
+        </a>
+      {% endif %}
+    </div>
+  </section>
+
+  <section class="man-section" aria-labelledby="man-files">
+    <h2 id="man-files">FILES</h2>
+    <div class="man-body man-rows">
+      <div class="man-row"><a class="man-key man-key-wide" href="{{ site.github.url }}/posts/">/posts/</a><span>all {{ site.posts.size }} entries, filterable by tag and language</span></div>
+      <div class="man-row"><a class="man-key man-key-wide" href="{{ site.github.url }}/about/">/about/</a><span>the longer version</span></div>
+      <div class="man-row"><a class="man-key man-key-wide" href="{{ site.github.url }}/academic/">/academic/</a><span>degrees, theses, the old research lane</span></div>
+      <div class="man-row"><a class="man-key man-key-wide" href="{{ site.github.url }}/feed.xml">/feed.xml</a><span>Atom feed, for people who still use readers</span></div>
+    </div>
+  </section>
+
+  <section class="man-section" aria-labelledby="man-environment">
+    <h2 id="man-environment">ENVIRONMENT</h2>
+    <div class="man-body man-rows">
+      <div class="man-row"><span class="man-key man-muted">HOME</span><span>den haag</span></div>
+      <div class="man-row"><span class="man-key man-muted">PATH</span><span>aotearoa:belgië:norge:nederland</span></div>
+    </div>
+  </section>
+
+  <section class="man-section" aria-labelledby="man-bugs">
+    <h2 id="man-bugs">BUGS</h2>
+    <div class="man-body">
+      <p>Still trying to make systems, sentences, and myself compile.</p>
+      <p>Entries from 2022–23 predate the current voice. Read with appropriate tolerance.</p>
+    </div>
+  </section>
+
+  <section class="man-section" aria-labelledby="man-reporting">
+    <h2 id="man-reporting">REPORTING BUGS</h2>
+    <div class="man-body">
+      <p><a href="mailto:feiyang97@pm.me">feiyang97@pm.me</a>. Typos, broken links and existential concerns accepted. Found something of mine? See <a href="{{ site.github.url }}/return/">return(1)</a>.</p>
+    </div>
+  </section>
+
+  <section class="man-section" aria-labelledby="man-see-also">
+    <h2 id="man-see-also">SEE ALSO</h2>
+    <div class="man-body">
+      <p><a href="{{ site.github.url }}/posts/">posts(7)</a>, <a href="{{ site.github.url }}/about/">about(7)</a>, <a href="{{ site.github.url }}/academic/">academic(7)</a></p>
+    </div>
+  </section>
+</div>

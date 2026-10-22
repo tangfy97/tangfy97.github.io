@@ -1,30 +1,12 @@
 .footer {
-  background: transparent;
-  color: $brand-color;
-  text-align: center;
-  min-height: 56px;
-  width: $container-width;
-  margin: 28px 0 16px;
-}
-@media (max-width: $container-width) {
-  .footer {
-    background: transparent;
-    color: $brand-color;
-    text-align: center;
-    min-height: 56px;
-    width: 95vw;
-  }
-}
-.footer-description {
-  display: block;
-  padding: 18px 0;
-  margin-bottom: 1rem;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 8px 24px;
+  margin: 72px 0 40px;
+  padding-top: 14px;
   color: $muted-ink;
+  border-top: 1px solid $line-color;
   font-family: $code-font-family;
-  font-size:0.72rem;
-}
-
-.footer-description a {
-  color: $accent-deep;
-  text-underline-offset: 0.24em;
+  font-size: 13px;
 }

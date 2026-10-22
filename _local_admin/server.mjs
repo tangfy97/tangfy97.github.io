@@ -147,6 +147,7 @@ const parseFrontMatter = (content, file) => {
     date: fileMatch ? fileMatch[1] : "",
     slug: fileMatch ? fileMatch[2] : "",
     author: front.author || "Feiyang",
+    lang: front.lang || "",
     tags,
     image: front.image || "",
     body
@@ -163,6 +164,10 @@ const markdownFor = (entry) => {
     `title: ${yamlQuote(entry.title)}`,
     `author: ${yamlQuote(entry.author || "Feiyang")}`
   ];
+
+  if (/^[a-z]{2}(\+[a-z]{2})*$/.test(String(entry.lang || ""))) {
+    lines.push(`lang: ${entry.lang}`);
+  }
 
   if (tags.length) {
     lines.push(`tags: [${tags.map(yamlQuote).join(", ")}]`);

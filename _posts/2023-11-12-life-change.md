@@ -2,6 +2,7 @@
 layout: post
 title: "Autumn Musings"
 author: "a fresh PhD grad"
+lang: en+zh
 tags: [work-after-phd, netherlands, nordic-years]
 image: norwayandnl.png
 ---

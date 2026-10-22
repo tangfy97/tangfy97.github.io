@@ -2,6 +2,7 @@
 layout: post
 title: "Ingen tråder igjen"
 author: "Feiyang"
+lang: zh
 tags: [netherlands, nordic-years, work-after-phd, time-memory]
 image: ingen-trader-igjen.webp
 image_alt: "Karl Johans gate in Oslo on a clear day"

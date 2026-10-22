@@ -1,5 +1,7 @@
 <footer class="footer">
-  <div class="footer-description">
-    {{ site.title }} | {{ site.description }} · <a href="{{ site.github.url }}/return/">found something?</a>
-  </div>
+  <span>{{ site.title }}</span>
+  {% if site.posts.first %}
+    <time datetime="{{ site.posts.first.date | date_to_xmlschema }}">{{ site.posts.first.date | date: "%Y-%m-%d" }}</time>
+  {% endif %}
+  <span>FEIYANG(7)</span>
 </footer>

@@ -1,5 +1,7 @@
 menu:
-- {name: 'posts', url: 'posts'}
-- {name: 'about', url: 'about'}
+- {name: 'posts', url: 'posts', section: 7}
+- {name: 'about', url: 'about', section: 7}
+- {name: 'academic', url: 'academic', section: 7}
+- {name: 'return', url: 'return', section: 1}
 
 post_date_prefix: 'logged on'

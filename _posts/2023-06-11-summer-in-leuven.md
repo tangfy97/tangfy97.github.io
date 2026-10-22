@@ -2,6 +2,7 @@
 layout: post
 title: "闪回记忆：鲁汶的那个夏天?"
 author: "飞扬"
+lang: zh
 tags: [time-memory, academic-trace, netherlands]
 image: leuvencovid19.jpg
 ---

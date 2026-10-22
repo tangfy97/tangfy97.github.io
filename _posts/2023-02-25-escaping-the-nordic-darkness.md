@@ -2,6 +2,7 @@
 layout: post
 title: "Escaping the Nordic Darkness"
 author: "Feiyang"
+lang: en
 tags: [travelogue, nordic-years, coffee-food]
 image: alicante.jpg
 ---

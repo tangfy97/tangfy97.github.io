@@ -2,6 +2,7 @@
 layout: post
 title: "Navigating Norway's Job Market: A Tale of High Hopes, Curveballs, and Unforgettable Moments?"
 author: "asian job seeker"
+lang: en
 tags: [job-market, nordic-years, migration]
 image: norwayjob.png
 ---
