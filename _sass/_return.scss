@@ -1,10 +1,10 @@
+/*
+  Found-property page (QR target): man-page look, but phone-first and obvious.
+*/
+
 .return-page {
   min-height: 100vh;
-  background:
-    linear-gradient(90deg, rgba(86, 112, 102, 0.045) 1px, transparent 1px),
-    radial-gradient(circle at 15% 0%, rgba(208, 222, 215, 0.68), transparent 32rem),
-    #f8faf7;
-  background-size: 30px 30px, auto, auto;
+  background: $page-bg;
 }
 
 .return-shell {
@@ -14,38 +14,45 @@
   display: flex;
   flex-direction: column;
   margin: 0 auto;
-  padding: 28px 0 48px;
+  padding: 40px 0 48px;
 }
 
 .return-header {
   display: flex;
-  justify-content: flex-end;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  gap: 8px 24px;
+  padding-bottom: 14px;
+  color: $muted-ink;
+  border-bottom: 1px solid $line-color;
   font-family: $code-font-family;
+  font-size: 13px;
 }
 
 .return-language {
   display: inline-flex;
-  gap: 3px;
-  padding: 3px;
-  border: 1px solid rgba(75, 103, 94, 0.2);
-  border-radius: 5px;
-  background: rgba(252, 253, 251, 0.62);
+  gap: 4px;
 }
 
 .return-language a {
-  padding: 7px 9px;
-  color: #5b7169;
-  border-radius: 3px;
-  font-size: 10px;
-  font-weight: 650;
-  letter-spacing: 0.03em;
-  line-height: 1;
+  padding: 4px 8px;
+  color: $accent-deep;
+  border-radius: 2px;
+  font-size: 13px;
+  line-height: 1.4;
   text-decoration: none;
 }
 
+.return-language a:hover {
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
 .return-language a[aria-current="page"] {
-  color: #f9fcfa;
-  background: #57746b;
+  color: $page-bg;
+  background: $accent-deep;
+  text-decoration: none;
 }
 
 .return-main {
@@ -60,115 +67,103 @@
 }
 
 .return-kicker {
-  margin: 0 0 13px;
-  color: #60766e;
+  margin: 0 0 10px;
+  color: $accent-deep;
   font-family: $code-font-family;
-  font-size: 10px;
-  font-weight: 650;
+  font-size: 13px;
+  font-weight: 600;
   letter-spacing: 0.08em;
   text-transform: uppercase;
 }
 
 .return-intro h1 {
   margin: 0;
-  color: #18322d;
-  font-family: $base-font-family;
-  font-size: unquote("clamp(2.7rem, 8vw, 5.4rem)");
-  font-weight: 650;
-  letter-spacing: -0.065em;
-  line-height: 0.94;
+  color: $ink-color;
+  font-family: $code-font-family;
+  font-size: unquote("clamp(2rem, 7vw, 3.4rem)");
+  font-weight: 600;
+  letter-spacing: -0.03em;
+  line-height: 1.1;
 }
 
 .return-actions {
   max-width: 650px;
-  margin-top: unquote("clamp(46px, 9vw, 80px)");
-  border-top: 1px solid rgba(69, 94, 85, 0.23);
+  margin-top: unquote("clamp(40px, 8vw, 64px)");
+  border-top: 1px solid $line-color;
 }
 
 .return-action {
-  min-height: 88px;
+  min-height: 72px;
   display: grid;
-  grid-template-columns: 158px minmax(0, 1fr) auto;
+  grid-template-columns: 18ch minmax(0, 1fr) auto;
   align-items: center;
-  gap: 18px;
-  padding: 18px 0;
-  color: #1e3a34;
-  border-bottom: 1px solid rgba(69, 94, 85, 0.2);
+  gap: 16px;
+  padding: 16px 0;
+  color: $ink-color;
+  border-bottom: 1px dotted $rule-dotted;
+  font-family: $code-font-family;
   text-decoration: none !important;
-  transition: color 160ms ease, padding-left 160ms ease;
 }
 
-a.return-action:hover {
-  padding-left: 8px;
-  color: #315f54;
+a.return-action:hover strong {
+  color: $accent-deep;
+  text-decoration: underline;
+  text-underline-offset: 4px;
 }
 
 .return-action-label {
-  color: #667c74;
-  font-family: $code-font-family;
-  font-size: 10px;
-  font-weight: 650;
-  letter-spacing: 0.06em;
-  text-transform: uppercase;
+  color: $muted-ink;
+  font-size: 13px;
 }
 
 .return-action strong {
   overflow-wrap: anywhere;
   color: inherit;
-  font-family: $code-font-family;
-  font-size: unquote("clamp(0.95rem, 2.2vw, 1.18rem)");
-  font-weight: 650;
-  letter-spacing: -0.025em;
+  font-size: unquote("clamp(1rem, 2.4vw, 1.2rem)");
+  font-weight: 600;
   line-height: 1.35;
 }
 
+.return-action--primary strong {
+  color: $accent-deep;
+}
+
 .return-action button {
-  padding: 7px 8px;
-  color: #466b60;
+  min-height: 36px;
+  padding: 0 12px;
+  color: $accent-deep;
   background: transparent;
-  border: 1px solid rgba(69, 94, 85, 0.25);
-  border-radius: 3px;
+  border: 1px solid $accent-deep;
+  border-radius: 2px;
   font-family: $code-font-family;
-  font-size: 9px;
-  font-weight: 650;
-  letter-spacing: 0.02em;
+  font-size: 13px;
   cursor: pointer;
 }
 
 .return-action button:hover {
-  color: #f9fcfa;
-  background: #57746b;
+  color: $page-bg;
+  background: $accent-deep;
 }
 
 @media (max-width: 560px) {
   .return-shell {
-    width: calc(100% - 40px);
-    padding-top: 20px;
+    width: calc(100% - 32px);
+    padding-top: 24px;
   }
 
   .return-main {
     align-content: start;
-    padding: 18vh 0 36px;
+    padding: 14vh 0 36px;
   }
 
   .return-action {
     min-height: 0;
     grid-template-columns: minmax(0, 1fr) auto;
-    gap: 7px 14px;
-    padding: 19px 0;
+    gap: 4px 14px;
+    padding: 18px 0;
   }
 
   .return-action-label {
     grid-column: 1 / -1;
-  }
-
-  .return-action strong {
-    font-size: 1rem;
-  }
-}
-
-@media (prefers-reduced-motion: reduce) {
-  .return-action {
-    transition: none;
   }
 }
